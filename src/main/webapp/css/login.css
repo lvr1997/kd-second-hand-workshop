@@ -1,0 +1,52 @@
+body{ min-width: 1024px; min-height: 100%; }
+#header{ position: relative; width: 100%; height: 323px; background-color: #11cd6e; }
+.logo{ position: absolute; z-index: 9999; top: 70px; left: 136px; display: inline-block; width: 253px; height: 42px; background: url(/images/web/logo.png) left top no-repeat; }
+#login-main,#register-main{ width: 556px; margin: -168px auto 0 auto; padding: 50px 47px 60px 57px; background-color: #fff; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; -webkit-box-shadow: 0 0 5px rgba(0,0,0,.09); box-shadow: 0 0 5px rgba(0,0,0,.09); display: table; position: relative; z-index: 1;}
+.layui-tab-title li{ padding: 0 41px; }
+.layui-tab-title{ margin-bottom: 20px; }
+.layui-tab-content{ padding: 0; }
+.layui-input:focus, .layui-textarea:focus { border-color: #11cd6e!important;}
+
+.register-btn,.login-btn{ background-color: #11cd6e; width: 100%; font-size: 16px; }
+.right-box{ width: 145px; padding-left: 80px; }
+.right-box p{ color: #666; }
+.right-box a{ color: #11cd6e; font-size: 16px; line-height: 50px; }
+.right-box a:hover{ text-decoration: underline; }
+.layui-layer-hui .layui-layer-content{ color: #fff; }
+
+/*注册*/
+#register-main{ height: 270px; }
+.reg-left{ width: 300px; padding-right: 30px; border-right: #eee solid 1px; }
+.phone{ position: relative; }
+.phoneCode,.captchaCode{ width: 160px; display: inline-block; }
+.captchaImage{ width: 125px; height: 38px; cursor: pointer; vertical-align: top; float: right; border: #ccc solid 1px; }
+.get-phoneCode{ width: 125px; display: inline-block; position: absolute; right: 0; height: 38px; background-color: #11cd6e; color: #fff; text-align: center; line-height: 38px; border-radius: 2px; }
+.get-phoneCode:hover{ color: #fff; }
+.showbox{ 
+	display: none;
+    width: 125px;
+    height: 37px;
+    vertical-align: top;
+    line-height: 38px;
+    text-align: center;
+    float: right;
+    border: #e6e6e6 solid 1px;
+    border-radius: 2px;
+    background-color: #e6e6e6;
+    color: #bbb;
+}
+.layui-form input[type=checkbox], .layui-form input[type=radio], .layui-form select{ display: inline-block; }
+.layui-tab-brief>.layui-tab-title .layui-this{ color: #11cd6e; }
+.layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after{ border-color: #11cd6e; }
+.check-wrap{ display: block; height: 38px; line-height: 38px;}
+.check-wrap a{ color: #11cd6e; }
+.check-wrap a:hover{ text-decoration: underline; }
+.checkbox{ height: 16px; width: 16px; vertical-align: sub; margin-right: 5px; }
+.reg-right{ margin-top: 110px; }
+
+/*登录*/
+#login-main{ height: 205px;}
+.forgetpwd{ text-align: right;}
+.forgetpwd a{ color: #11cd6e;}
+.forgetpwd a:hover{ text-decoration: underline; }
+.log-right{ padding-top: 80px; }

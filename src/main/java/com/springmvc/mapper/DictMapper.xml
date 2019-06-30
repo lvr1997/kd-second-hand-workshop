@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="com.springmvc.dao.DictMapper">
+	<!-- List<Province> getProvinces(); -->
+	<select id="getProvinces" resultType="com.springmvc.pojo.Province">
+		select 
+			id,
+			province_code as provinceCode,
+			province_name as provinceName
+		from
+			dict_provinces
+				
+	</select>
+	
+	<!-- List<City> getCities();-->
+	
+
+	<select  id="getCities" resultType="com.springmvc.pojo.City">
+		select
+			id,
+			province_code as provinceCode,
+			city_code as cityCode,
+			city_name as cityName
+		from
+			dict_cities
+		where 
+			province_code = #{provinceCode}
+	</select>
+	
+	<!-- List<Area> getAreas();-->
+	<select id="getAreas" resultType="com.springmvc.pojo.Area">
+		select 
+			id,
+			city_code as cityCode,
+			area_code as areaCode,
+			area_name as areaName
+		from
+			dict_areas
+		where
+			city_code = #{cityCode}
+	</select>
+	
+	<!-- String getProvinceByCode(String code);-->
+	<select id="getProvinceByCode" resultType="java.lang.String">
+		select 
+			province_name as provinceName
+		from
+			dict_provinces
+		where
+			province_code=#{provinceCode}
+	</select>
+	<!-- String getCityByCode(String code); -->
+	<select id="getCityByCode" resultType="java.lang.String">
+		select
+			city_name as cityName
+		from
+			dict_cities
+		where 
+			city_code = #{cityCode}
+	</select>
+	
+	<!-- String getAreaByCode(String code);  -->
+	<select id="getAreaByCode" resultType="java.lang.String">
+		select
+			area_name as areaName
+		from
+			dict_areas
+		where 
+			area_code = #{areaCode}
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

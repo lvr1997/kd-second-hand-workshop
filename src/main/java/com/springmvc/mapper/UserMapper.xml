@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.springmvc.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.springmvc.pojo.User" >
+    <constructor >
+      <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="phone" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="username" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="password" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="QQ" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="create_at" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="goods_num" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="power" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="last_login" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="status" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="birthday" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="sex" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="img_url" jdbcType="LONGVARCHAR" javaType="java.lang.String" />
+      <arg column="residence" jdbcType="LONGVARCHAR" javaType="java.lang.String" />
+      <arg column="signature" jdbcType="LONGVARCHAR" javaType="java.lang.String" />
+    </constructor>
+  </resultMap>
+
+  <!--通过id删除用户信息-->
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <!--添加用户-->
+  <insert id="insert" parameterType="com.springmvc.pojo.User" useGeneratedKeys="true" keyProperty="">
+
+    insert into user (id, phone, username,
+      password, QQ, create_at,
+      goods_num, power, last_login,
+      status, birthday, sex,
+      img_url, residence, signature
+      )
+    values (#{id,jdbcType=INTEGER}, #{phone,jdbcType=CHAR}, #{username,jdbcType=VARCHAR},
+      #{password,jdbcType=CHAR}, #{qq,jdbcType=VARCHAR}, #{createAt,jdbcType=VARCHAR},
+      #{goodsNum,jdbcType=INTEGER}, #{power,jdbcType=TINYINT}, #{lastLogin,jdbcType=VARCHAR},
+      #{status,jdbcType=TINYINT}, #{birthday,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR},
+      #{imgUrl,jdbcType=LONGVARCHAR}, #{residence,jdbcType=LONGVARCHAR}, #{signature,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+
+  <!--通过id更新用户信息-->
+  <update id="updateByPrimaryKey" parameterType="com.springmvc.pojo.User" >
+    update user
+    set phone = #{phone,jdbcType=CHAR},
+      username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=CHAR},
+      QQ = #{qq,jdbcType=VARCHAR},
+      create_at = #{createAt,jdbcType=VARCHAR},
+      goods_num = #{goodsNum,jdbcType=INTEGER},
+      power = #{power,jdbcType=TINYINT},
+      last_login = #{lastLogin,jdbcType=VARCHAR},
+      status = #{status,jdbcType=TINYINT},
+      birthday = #{birthday,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      img_url = #{imgUrl,jdbcType=LONGVARCHAR},
+      residence = #{residence,jdbcType=LONGVARCHAR},
+      signature = #{signature,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <!--通过id查找用户-->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select id, phone, username, password, QQ, create_at, goods_num, power, last_login,
+    status, birthday, sex, img_url, residence, signature
+    from user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <!--查询所有用户信息-->
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select
+      id, phone, username, password, QQ, create_at, goods_num, power, last_login, status, birthday, sex, img_url, residence, signature
+    from
+      user
+  </select>
+
+  <!--和上面自动生成的一样-->
+  <select id="getUserList" resultMap="BaseResultMap">
+    SELECT
+      id, phone, username, password, QQ, create_at, goods_num, power, last_login, status, img_url, birthday, sex,residence,signature
+    FROM
+      user
+  </select>
+
+  <!--通过手机号获取用户信息-->
+  <select id="getUserByPhone" resultMap="BaseResultMap">
+    SELECT
+      id, phone, username, password, QQ, create_at, goods_num, power, last_login, status, img_url, birthday, sex,residence,signature
+    FROM
+      user
+    WHERE
+      phone = #{phone}
+
+  </select>
+
+  <!--更新最后登录时间-->
+  <update id="updateLastLoginByPrimaryKey" parameterType="com.springmvc.pojo.User">
+      update
+       user
+      set
+       last_login = #{lastLogin,jdbcType=VARCHAR}
+      where
+       id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <!--更新用户闲置数量-->
+  <update id="updateGoodsNum">
+    update
+      user
+    set
+      goods_num = #{goodsNum}
+    where
+      id = #{id}
+
+  </update>
+
+  <!--更新用户头像-->
+  <update id="updateImgUrl">
+    update
+     user
+    <set>
+      <if test="url != null">
+        img_url = #{url}
+      </if>
+    </set>
+    where
+     id = ${id}
+  </update>
+
+  <!--更新用户信息-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.springmvc.pojo.User">
+    UPDATE
+      USER
+    <set>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=CHAR},
+      </if>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=CHAR},
+      </if>
+      <if test="qq != null">
+        QQ = #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="createAt != null">
+        create_at = #{createAt,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsNum != null">
+        goods_num = #{goodsNum,jdbcType=INTEGER},
+      </if>
+      <if test="power != null">
+        power = #{power,jdbcType=TINYINT},
+      </if>
+      <if test="lastLogin != null">
+        last_login = #{lastLogin,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="imgUrl != null">
+        img_url = #{imgUrl,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="residence != null">
+        residence = #{residence,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="signature != null">
+        signature = #{signature,jdbcType=LONGVARCHAR}
+      </if>
+    </set>
+    where
+      id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="checkUserByPhone" resultType="java.lang.Integer">
+    SELECT
+     COUNT(*)
+    FROM
+     USER
+    WHERE
+      phone=#{phone}
+  </select>
+
+  <update id="updatePasswordByPrimaryKey">
+    UPDATE
+      user
+    <set>
+      <if test="password != null">
+        password = #{password}
+      </if>
+    </set>
+    WHERE
+      id = #{uid}
+  </update>
+
+  <update id="updatePowerByPrimaryKey">
+    UPDATE
+    user
+    <set>
+      <if test="power != null">
+        power = #{power}
+      </if>
+    </set>
+    WHERE
+    id = #{uid}
+  </update>
+  <select id="searchUserByNameOrPhone" resultMap="BaseResultMap">
+      SELECT
+        *
+      FROM
+        user
+      WHERE
+        (username like concat('%',#{name},'%')
+      OR
+        phone like concat('%',#{phone},'%'))
+  </select>
+
+
+
+</mapper>

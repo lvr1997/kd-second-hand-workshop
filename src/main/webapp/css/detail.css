@@ -1,0 +1,478 @@
+#main {
+    margin-bottom: 20px;
+}
+
+.detail,
+.detail-sidebar {
+    border: #e5e5e5 solid 1px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.detail {
+    width: 800px;
+}
+
+.detail-sidebar {
+    /*height: 600px;*/
+    width: 280px;
+}
+
+.title {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: #e5e5e5 solid 1px;
+    padding: 0 20px;
+}
+
+.title h2 {
+    font-size: 18px;
+    display: inline-block;
+}
+
+.title {}
+
+.publish-time,
+.report,
+.view-number {
+    font-size: 13px;
+    color: #ccc;
+    margin-right: 15px;
+}
+
+.report {
+    margin-right: 0px;
+}
+
+
+/* #MagnifierWrap{position: relative;width: 350px;margin:100px auto;} */
+
+#MagnifierWrap2 {
+    position: relative;
+    width: 350px;
+    margin: 20px;
+}
+
+.MagnifierMain {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border: #e5e5e5 solid 1px;
+}
+
+.MagnifierMain img {
+    width: 350px;
+    height: 350px;
+}
+
+.MagnifierDrag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ccc;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    cursor: move;
+}
+
+.MagnifierPop {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    background: #fff url(http://fan.yoka.com/fan5.0/img/loading.gif) no-repeat center center;
+}
+
+.MagnifierImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.spec-items {
+    position: relative;
+    width: 292px;
+    height: 69px;
+    overflow: hidden;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+.spec-items ul {
+    width: 500%;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.spec-items ul * {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.spec-items li {
+    width: 65px;
+    height: 65px;
+    float: left;
+    overflow: hidden;
+    margin-right: 5px;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.spec-items li.on {
+    border: 2px solid #000;
+}
+
+.spec-items li img {
+    width: 100%;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+.spec-items li.on img {
+    -webkit-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    -o-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+}
+
+span.spe_leftBtn,
+span.spe_rightBtn {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 20px;
+    height: 69px;
+    line-height: 69px;
+    font-family: "黑体";
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    cursor: default;
+    background-color: #c5fee1;
+}
+
+span.on {
+    background-color: #11cd6e;
+    color: #fff;
+    cursor: pointer;
+}
+
+span.spe_leftBtn {
+    left: 0;
+}
+
+span.spe_rightBtn {
+    right: 0;
+}
+
+.good-info {
+    margin: 20px;
+    width: 370px;
+    /*height: 500px;*/
+}
+
+.good-info h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.info-line {
+    line-height: 50px;
+    clear: both;
+}
+
+.info-line span {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.info-line .param-name {
+    font-size: 13px;
+    color: #999;
+    width: 65px;
+    float: left;
+}
+
+.info-line .param-value {
+    max-width: 305px;
+}
+
+.info-line .param-value.address {
+    line-height: 25px;
+    vertical-align: text-top;
+    margin-top: -2px;
+}
+
+.good-price {
+    color: #f40;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.good-old-price {
+    text-decoration: line-through;
+}
+
+.good-old-link a {
+    color: #11cd6e;
+    margin-left: 15px;
+}
+
+.good-old-link a:hover {
+    text-decoration: underline;
+}
+
+.seller {
+    color: #11cd6e;
+}
+
+.seller:hover {
+    color: #f40;
+}
+
+.btns {
+    margin-top: 20px;
+}
+
+.info-btn {
+    line-height: 50px;
+    padding: 0 30px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #11cd6e;
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.btns .want {
+    background-color: #fff;
+    color: #11cd6e;
+    border: #11cd6e solid 2px;
+    line-height: 46px;
+}
+
+.contect-seller:hover {
+    color: #fff;
+}
+
+.want i {
+    font-size: 40px;
+    vertical-align: bottom;
+    color: #ccc;
+}
+
+.want i.wanted {
+    color: #f40;
+}
+
+.good-description {
+    clear: both;
+    padding: 20px;
+}
+
+.description-title {
+    border-bottom: #11cd6e solid 1px;
+}
+
+.description-title span {
+    line-height: 40px;
+    border-bottom: #11cd6e solid 4px;
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.description-body {
+    padding: 15px;
+    overflow: hidden;
+}
+
+.description-body p {
+    text-indent: 2em;
+    color: #999;
+}
+
+.sidebar-list {}
+
+.sidebar-list li {
+    padding: 10px;
+    border-bottom: #e5e5e5 solid 1px;
+}
+
+.sidebar-list li a:hover {
+    color: #f40;
+    transition: all .3s;
+}
+
+.sidebar {
+    position: relative;
+    display: block;
+}
+
+.sidebar .sidebar-image {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.sidebar-header {
+    line-height: 50px;
+    border-bottom: #e5e5e5 solid 1px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 20px;
+    background: #11cd6e;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.sidebar .sidebar-title {
+    /*line-height: 30px;*/
+}
+
+.sidebar .sidebar-price {
+    color: #f40;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+
+.report-layer {}
+
+.report-layer .r-title {
+    text-align: center;
+    line-height: 40px;
+}
+
+.report-layer .description {
+    width: 95%;
+    height: 150px;
+    border: #ccc solid 1px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.submit-report {
+    margin: 13px auto 0;
+    display: block;
+    width: 64px;
+    background-color: #11cd6e;
+}
+
+.user-not-login {
+    border: #11cd6e solid 1px;
+    border-radius: 5px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.user-not-login p {
+    text-indent: initial;
+}
+
+.user-not-login a.lgbtn {
+    display: inline-block;
+    border: #11cd6e solid 1px;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    height: 30px;
+    padding: 0 20px;
+    color: #11cd6e;
+}
+
+a.lgbtn:hover {
+    color: #fff;
+    background-color: #11cd6e;
+}
+
+.comments {
+    resize: none;
+    border-color: #11cd6e;
+}
+
+.comment-btns {
+    margin-top: 10px;
+}
+
+.comment-submit {
+    background-color: #11cd6e;
+}
+
+.comments-words {
+    margin-left: 20px;
+    color: #999;
+}
+
+.comment-list {
+    padding: 10px 0;
+}
+
+.comment-list p {
+    text-indent: 0;
+    line-height: 25px;
+}
+
+.comment-list p span {
+    color: #666;
+    font-weight: bold;
+}
+
+.comment-list li {
+    border-bottom: #ccc dashed 1px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+
+/*联系卖家弹窗样式 start*/
+
+.user-contect {
+    display: none;
+    width: 300px;
+    border: #11cd6e solid 2px;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.user-contect p {
+    line-height: 40px;
+    text-align: center;
+}
+
+.contect-header {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #11cd6e;
+    color: #fff;
+    font-size: 16px;
+}
+
+.user-contect a {
+    display: inline-block;
+    border: #11cd6e solid 1px;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    height: 30px;
+    padding: 0 20px;
+    color: #11cd6e;
+    margin: 20px 0;
+}
+
+
+/*联系卖家弹窗样式 end*/

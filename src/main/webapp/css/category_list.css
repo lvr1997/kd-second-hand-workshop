@@ -1,0 +1,64 @@
+#main{ margin-bottom: 20px; }
+.cate-name-list{ height: 40px; line-height: 40px; padding: 0 20px; border: #e5e5e5 solid 1px; background-color: #fff; }
+.cate-name-list span{ color: #999; font-size: 13px; }
+.cate-name-list a{ color: #999; margin: 0 10px; font-size: 13px;}
+.cate-name-list a:hover{ text-decoration: underline; color: #11cd6e; }
+.cate-name-list a.active{ color: #11cd6e;}
+
+.list-body{}
+.list-body ul{ padding-top: 20px; width: 1115px; }
+.list-body li{ 
+	width: 209.5px; 
+	border: #e5e5e5 solid 1px; 
+	float: left; 
+	margin-right: 11px;
+	background-color: #fff;
+	margin-bottom: 15px;
+}
+.list-body li:hover{
+	border: #11cd6e solid 1px;
+	transition: all .3s;
+	box-shadow: #11cd6e 0px 1px 5px;
+}
+
+.good-image{}
+.good-image img{ width: 209.5px; height: 209.5px; }
+.good-title{ 
+	display: block; 
+	color: #333; 
+	text-decoration: none; 
+	line-height: 28px; 
+	padding: 0 5px; 
+	overflow: hidden; 
+	height: 25px;
+}
+.good-title:hover{ color: #f40; }
+.good-price{ 
+	color: #f40; 
+	font-weight: bold; 
+	padding-left: 5px; 
+	line-height: 25px;
+}
+.quan{
+	float: right;
+	border: #f30 dashed 1px;
+	padding: 0 2px;
+	margin-right: 5px;
+	color: #f30;
+}
+.quan:hover{
+	color: #fff;
+	background: #f30;
+	transition: all .3s;
+}
+.quan:hover span{
+	color: #fff;
+	transition: all .3s;
+}
+.quan span{
+	padding-right: 4px;
+	margin-right: 2px;
+	border-right: #f30 dashed 1px;
+	color: #f30;
+	padding-left: 2px;
+}

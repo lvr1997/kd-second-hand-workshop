@@ -1,0 +1,94 @@
+#main h2{
+	text-align: center;
+	line-height: 50px;
+	background-color: #fff;
+	line-height: 50px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	border-bottom: #e5e5e5 solid 1px;
+	border-right: #e5e5e5 solid 1px;
+}
+
+.publish-main{
+	background-color: #fff;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	border-bottom: #e5e5e5 solid 1px;
+	border-right: #e5e5e5 solid 1px;
+	padding: 20px 50px;
+}
+.input-line{
+	margin-top: 30px;
+}
+.input-line.image{ text-align: center; }
+.good-image{
+	width: 150px;
+	height: 150px;
+	border-radius: 5px;
+	border: #11cd6e solid 2px;
+}
+.uploaded{
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+}
+i.delete{
+	color: #f40;
+	position: absolute;    
+	font-size: 24px;
+    right: -13px;
+    top: -19px;
+    cursor: pointer;
+}
+.image-upload-btn{
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	line-height: 150px;
+	border-radius: 5px;
+	border: #11cd6e solid 2px;
+	vertical-align: bottom;
+	/*background-color: #f2f2f2;*/
+}
+.image-upload-btn:hover i{ color: #11cd6e; transition: all .3s; }
+.image-upload-btn i{ font-size: 40px; }
+
+.layui-input, .layui-textarea{ }
+.layui-form-select dl dd.layui-this{ background-color: #11cd6e; }
+.layui-form-pane .layui-form-text .layui-form-label.good-description{ padding-left: 28px; }
+
+.publish-submit{ text-align: center; }
+.publish-submit .layui-btn{ background-color: #11cd6e; margin-top: 20px; width: 150px; height: 45px; line-height: 45px; font-size: 20px; }
+
+.layui-form-pane .layui-input:hover, .layui-form-pane .layui-textarea:hover,
+.layui-form-pane .layui-input:focus, .layui-form-pane .layui-textarea:focus {
+    border-color: #11cd6e!important;
+}
+
+.image .layui-box.layui-upload-button{
+	width: 153px;
+	height: 153px;
+	border: #11cd6e solid 2px;
+}
+.image .layui-upload-icon{
+	width: 153px;
+	height: 153px;
+	margin: 0;
+	text-align: center;
+	line-height: 149px;
+	font-size: 20px;
+}
+.image .layui-upload-icon i{
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.add-original-link{
+	background-color: #11cd6e;
+	margin-top: 4px;
+}
+.no-data{
+	border-color: red;
+}

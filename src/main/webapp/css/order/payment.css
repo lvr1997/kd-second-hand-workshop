@@ -1,0 +1,248 @@
+@charset "utf-8";
+i{
+    font-style: normal;
+}
+b{
+    font-weight: normal;
+}
+img{
+    border:0px;
+    vertical-align:middle;
+    cursor:pointer;
+}
+h1{
+    font-size:12px;
+    color:#808080;
+    font-family: "microsoft yahei";
+    margin-bottom:11px;
+    border-bottom: 1px solid #bbb;
+    margin-top:30px;
+}
+/*#header{*/
+    /*height:40px;*/
+    /*margin:10px auto 10px auto;*/
+    /*width:1000px;*/
+    /*clear:both;*/
+/*}*/
+#navlist {
+    width: 1000px;
+    height: 38px;
+    margin: 25px auto;
+}
+#navlist li{
+    float:left;
+    height:38px;
+    line-height:38px;
+    position: relative;
+}
+
+.navlist_blue{
+    background: -moz-linear-gradient(top, #27b0f6 0%, #0aa1ed 100%);
+    background: -webkit-linear-gradient(top, #27b0f6 0%, #0aa1ed 100%);
+    background: -o-linear-gradient(top, #27b0f6 0%, #0aa1ed 100%);
+    background: -ms-linear-gradient(top, #27b0f6 0%, #0aa1ed 100%);
+    box-shadow: 3px 3px 6px 0px #ccc;
+    text-align:center;
+    font-size:16px;
+    font-weight:bold;
+    color:#FFF;
+    width:310px;
+    height:38px;
+}
+#navlist .navlist_blue_arrow{
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-left: 20px solid #0aa1ed;
+    border-bottom: 19px solid transparent;
+}
+
+.navlist_gray{
+    background: -moz-linear-gradient(top, #f5f4f5 0%, #e6e6e5 100%);
+    background: -webkit-linear-gradient(top, #f5f4f5 0%,#e6e6e5 100%);
+    background: -o-linear-gradient(top, #f5f4f5 0%,#e6e6e5 100%);
+    background: -ms-linear-gradient(top, #f5f4f5 0%,#e6e6e5 100%);
+    box-shadow: 3px 3px 6px 0px #ccc;
+    text-align:center;
+    font-size:14px;
+    font-weight:bold;
+    width:325px;
+}
+
+#navlist .navlist_gray_arrow{
+    width: 0;
+    height: 0;
+    border-left: 20px solid #e8e8e8;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+}
+#navlist>ul>li>b{
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-left: 20px solid #f5f5f5;
+    position:absolute;
+    left:0;
+}
+/*结算条*/
+
+#container #count_bar{
+    margin-top:260px;
+    margin-bottom:10px;
+    width:1000px;
+    height:54px;
+    line-height:54px;
+    background: -moz-linear-gradient(top, #f5f4f5 0%, #e6e6e5 100%);
+    background: -webkit-linear-gradient(top, #f5f4f5 0%,#e6e6e5 100%);
+    background: -o-linear-gradient(top, #f5f4f5 0%,#e6e6e5 100%);
+    background: -ms-linear-gradient(top, #f5f4f5 0%,#e6e6e5 100%);
+    box-shadow: 3px 3px 6px 0px #ccc;
+    clear:both;
+}
+
+#count_bar>span{
+    font-size:12px;
+    text-align: left;
+}
+
+#count_bar .pay_leftTime{
+    padding: 0 16px;
+    color:#636363;
+}
+#count_bar .pay_leftTime>b{
+    color:#0aa1ed;
+}
+#count_bar .okPay{
+    float: right;
+    margin:11px 16px;
+    width:86px;
+    height:32px;
+    cursor:pointer;
+    line-height:32px;
+    box-sizing: border-box;
+    text-align: center;
+    /*FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ffb20f,endColorStr=eda50b); /!*IE 6 7 8*!/*/
+    background: -ms-linear-gradient(top, #ffb20f,  #eda50b);        /* IE 10 */
+    background:-moz-linear-gradient(top,#ffb20f,#eda50b);/*火狐*/
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#ffb20f), to(#eda50b));/*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffb20f), to(#eda50b));      /* Safari 4-5, Chrome 1-9*/
+    background: -webkit-linear-gradient(top, #ffb20f, #eda50b);   /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(top, #ffb20f, #eda50b);  /*Opera 11.10+*/
+    color:#fff;
+
+}
+/*支付订单信息*/
+#container {
+    width: 1000px;
+    margin: 10px auto;
+}
+#container .pay_info{
+    color:#808080;
+    padding:0 2px;
+    font-size:12px;
+}
+#container .pay_info span{
+    float:right;
+    padding-right:2px;
+}
+#container .pay_info b>i{
+    color:#0AA1ED;
+    font-weight:bold;
+}
+
+/*支付方式选择*/
+#pay_type .pay_type_title{
+    background: -moz-linear-gradient(top, #f5f4f5 0%, #e6e6e5 100%);
+    background: -webkit-linear-gradient(top, #f5f4f5 0%,#e6e6e5 100%);
+    background: -o-linear-gradient(top, #f5f4f5 0%,#e6e6e5 100%);
+    background: -ms-linear-gradient(top, #f5f4f5 0%,#e6e6e5 100%);
+    box-shadow: 3px 3px 3px #ccc;
+    color:#808080;
+    font-size:12px;
+    height:30px;
+    line-height:30px;
+    padding:0 18px;
+}
+#pay_type .pay_type_title span{
+    float:right;
+}
+
+/*支付方式*/
+
+#pay_type .pay_type img{
+    padding:20px;
+    border: 1px solid transparent;
+
+}
+#pay_type .pay_type img:hover{
+    border: 1px solid #0aa1ed;
+}
+/*订单支付结果*/
+h1 b{
+    color:#0aa1ed;
+    font-size:16px;
+    font-weight: bold;
+}
+h1 i{
+    font-size:16px;
+}
+#container .pay_result{
+    float:right;
+    width:448px;
+    height:90px;
+    margin-right:260px;
+    margin-top:130px;
+    color:#808080;
+    clear: both;
+    margin-bottom: 176px;
+}
+#container .pay_result >img{
+    float:left;
+    padding:50px 20px 0 66px;
+}
+#container .pay_result >p{
+    padding:15px 15px 0 5px;
+    font-size:32px;
+    font-family: simhei;
+    color: #0aa1ed;
+    margin-top:46px;
+    margin-bottom:5px;
+}
+.rt{float: right}
+#container .pay_result a{
+    color:#bbbbbb;
+}
+#container .pay_result a:hover{
+    color:#0aa1ed;
+}
+
+/*银行支付*/
+#dnBank ul{
+    background: #fff;
+    width:1000px;
+    box-sizing: border-box;
+    padding: 35px 16px 25px 18px;
+    float:left;
+    box-shadow: 3px 3px 6px #ccc;
+}
+#dnBank ul li{
+    float:left;
+    margin:0 13px 10px;
+}
+.img{
+    border:2px solid transparent;
+}
+#dnBank>ul>li img:hover{
+    opacity: 0.9;
+}
+.hover{
+    border-color: #0aa1fd;
+    border-radius: 8px;
+}
+#canvas{
+    float:left;
+}
+#foot_box{
+    display: block;
+}

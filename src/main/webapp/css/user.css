@@ -1,0 +1,539 @@
+#main {
+    margin-bottom: 20px;
+}
+
+.user-sider {
+    width: 180px;
+    background-color: #fff;
+    padding: 20px;
+    border: #e5e5e5 solid 1px;
+    min-height: 500px;
+}
+
+.user-info {}
+
+.user-header {
+    width: 124px;
+    height: 124px;
+    border-radius: 66px;
+    border: #11cd6e solid 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+.username {
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 18px;
+}
+
+.username:hover {
+    color: #11cd6e;
+}
+
+.username i {
+    color: #999;
+    margin-right: 5px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.sider-nav {
+    border-top: #e5e5e5 solid 1px;
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
+.sider-nav ul {}
+
+.sider-nav ul li {
+    text-align: center;
+}
+
+.sider-nav ul li a {
+    line-height: 40px;
+    display: block;
+}
+
+.sider-nav ul li a.active {
+    background-color: #11cd6e;
+    color: #fff;
+}
+
+.sider-nav ul li a .icon {
+    color: #333;
+    font-size: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.sider-nav ul li a.active .icon {
+    color: #fff;
+}
+
+.sider-nav ul li a:hover {
+    background-color: #e5e5e5;
+    transition: all .3s;
+    color: #333;
+}
+
+.sider-nav ul li a:hover .icon {
+    color: #333;
+    transition: all .3s;
+}
+
+.user-main {
+    width: 860px;
+}
+
+.user-main ul {}
+
+.user-main ul li {
+    background-color: #fff;
+    border: #e5e5e5 solid 1px;
+    margin-bottom: 20px;
+}
+
+.list-header {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border-bottom: #e5e5e5 solid 1px;
+}
+
+.list-header span {
+    color: #999;
+    font-size: 13px;
+}
+
+.list-main {
+    padding: 10px;
+}
+
+.goods-images {
+    margin-right: 20px;
+}
+
+.goods-images img {
+    width: 100px;
+    height: 100px;
+    border: #e5e5e5 solid 1px;
+}
+
+.goods-title {
+    display: block;
+    margin: 10px 0;
+}
+
+.goods-title:hover {
+    color: #11cd6e;
+    text-decoration: underline;
+    transition: all .2s;
+}
+
+.goods-price {
+    color: #666;
+}
+
+.goods-price span {
+    color: #f40;
+    font-size: 20px;
+}
+
+
+/*没有数据*/
+
+.no-data {
+    height: 540px;
+    background-color: #fff;
+    border: #e5e5e5 solid 1px;
+}
+
+.no-data p {
+    line-height: 540px;
+    text-align: center;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.operation {
+    width: 150px;
+    border-left: #e5e5e5 solid 1px;
+    height: 70px;
+    padding: 15px 0;
+}
+
+.operation a {
+    display: block;
+    text-align: center;
+    line-height: 25px;
+    width: 90px;
+    border: #e5e5e5 solid 1px;
+    border-radius: 3px;
+    margin: 5px auto;
+}
+
+.operation a:hover {
+    background-color: #11cd6e;
+    transition: all .2s;
+    color: #fff;
+    border-color: #11cd6e;
+}
+
+.operation .edit {}
+
+.operation .delete {}
+
+.message-main {
+    background-color: #fff;
+}
+
+.message-main .layui-tab {
+    margin: 0 10px;
+}
+
+.message-main .layui-tab ul li {
+    border: none;
+}
+
+.layui-tab-brief>.layui-tab-title .layui-this {
+    color: #11cd6e;
+}
+
+.layui-tab-brief>.layui-tab-more li.layui-this:after,
+.layui-tab-brief>.layui-tab-title .layui-this:after {
+    border-color: #11cd6e;
+}
+
+.userinfo {
+    background: #fff;
+    padding-top: 20px;
+    border: #e5e5e5 solid 1px;
+}
+
+.picture-para {
+    line-height: 80px;
+}
+
+img.user-info-picture {
+    width: 100px;
+    height: 100px;
+    border: #e5e5e5 solid 1px;
+}
+
+.layui-form-item {
+    vertical-align: middle;
+}
+
+.change-picture {
+    display: inline-block;
+    margin-left: 20px;
+    background-color: #11cd6e;
+}
+
+.userinfo-submit {
+    background-color: #11cd6e;
+}
+
+.layui-form-label em {
+    font-style: normal;
+    color: red;
+}
+
+.userinfo .phone_number {
+    background-color: #e5e5e5;
+    cursor: not-allowed;
+}
+
+.userinfo .layui-upload-button {
+    margin-left: 20px;
+    border-color: #11cd6e;
+    cursor: pointer;
+}
+
+.userinfo .layui-upload-button .layui-upload-icon {
+    cursor: pointer;
+}
+
+.change-picture {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+
+.auth {
+    margin-top: 15px;
+}
+
+.auth a {
+    display: inline-block;
+    width: 31.5%;
+    text-align: center;
+}
+
+.auth a i.icon {
+    vertical-align: middle;
+    font-size: 20px;
+    color: #ccc;
+}
+
+
+/*.realname-auth i.icon{ vertical-align: text-bottom; }*/
+
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: #11cd6e;
+}
+
+
+/*用户认证*/
+
+.auth-wrap,
+.tips-wrap {
+    background-color: #fff;
+    border: #e5e5e5 solid 1px;
+}
+
+.auth-wrap .auth-line {
+    height: 80px;
+    margin: 0 25px;
+    padding: 0 25px;
+    border-bottom: #e5e5e5 solid 1px;
+}
+
+.auth-line div.auth-items {
+    display: inline-block;
+    line-height: 80px;
+}
+
+.auth-line .parameter {
+    width: 100px;
+}
+
+.auth-line .operate {
+    width: 100px;
+    float: right;
+    text-align: center;
+}
+
+.auth-line .operate a {
+    color: #11cd6e;
+}
+
+.auth-line .operate a:hover {
+    text-decoration: underline;
+}
+
+.auth-line .parameter-values {
+    width: 400px;
+    padding-left: 150px;
+    color: #999;
+    font-size: 13px;
+}
+
+.input-area {
+    display: none;
+}
+
+.auth-line .layui-form-label {
+    width: 225px;
+}
+
+.auth-done {
+    margin-left: 253px;
+    line-height: 40px;
+}
+
+.auth-done .layui-icon {
+    color: #11cd6e;
+    font-size: 40px;
+    vertical-align: top;
+}
+
+.parameter-values .layui-icon {
+    color: #11cd6e;
+    vertical-align: top;
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+.tips-wrap {
+    margin-bottom: 10px;
+    line-height: 40px;
+    padding-left: 10px;
+    width: 850px;
+    text-align: center;
+}
+
+.tips-wrap strong {
+    color: #f40;
+}
+
+
+/*邮箱验证*/
+
+.auth-email {
+    text-align: center;
+    background-color: #fff;
+    border: #e5e5e5 solid 1px;
+    padding: 50px 0;
+    height: 440px;
+}
+
+.auth-email i.layui-icon {
+    font-size: 45px;
+}
+
+.auth-email .success {
+    color: #11cd6e;
+}
+
+.auth-email .error {
+    color: #f40;
+}
+
+.auth-email a {
+    color: #3c9df9;
+}
+
+p.msg {
+    margin: 8px 0 12px 0;
+}
+
+
+/*我的留言*/
+
+.message-main {
+    min-height: 541px;
+}
+
+.comment-list {}
+
+.message-main ul.comment-list li,
+.message-main ul.published-comment-list li {
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    border-bottom: #e2e2e2 solid 1px;
+}
+
+.comment-list li p,
+.published-comment-list li p {
+    line-height: 35px;
+}
+
+.comment-list li p a,
+.published-comment-list li p a {
+    color: #11cd6e;
+}
+
+.comment-list li b {}
+
+.comment-list li span,
+.published-comment-list li span {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.comment-list .nodata,
+.published-comment-list .nodata {
+    text-align: center;
+    line-height: 400px;
+    font-size: 16px;
+    color: #ccc;
+}
+
+
+/*帮助中心(意见反馈) start*/
+
+.feedback {}
+
+.feedback h1 {
+    display: block;
+    line-height: 50px;
+    padding-left: 20px;
+    border: #e5e5e5 solid 1px;
+    background: #fff;
+    font-size: 16px;
+}
+
+.feedback-content {
+    margin-top: 20px;
+    background: #fff;
+    padding: 30px;
+    border: #e5e5e5 solid 1px;
+}
+
+.feedback-content textarea {
+    display: block;
+    width: 96%;
+    height: 200px;
+    border: #e5e5e5 solid 1px;
+    resize: none;
+    padding: 2%;
+}
+
+.feedback-submit {
+    margin-top: 20px;
+    background: #11cd6e;
+}
+
+
+/*帮助中心(意见反馈) end*/
+
+
+/*认证页面 弹窗 start*/
+
+.auth-layer .layui-layer-title {
+    display: none;
+}
+
+.layui-layer.auth-layer {
+    background-image: url(../images/web/user/auth_alert_bg.png);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.auth-layer .layui-layer-content {
+    padding: 60px 20px 75px;
+    color: #fff;
+    position: relative;
+}
+
+.auth-show-box {
+    width: 33%;
+    float: left;
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.auth-show-box .icon {
+    color: #fff;
+    font-size: 50px;
+}
+
+.auth-show-box p {
+    color: #fff;
+}
+
+.auth-layer p.tips {
+    text-align: center;
+    color: #fff;
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    width: 90%;
+    bottom: 44px;
+    text-align: center;
+}
+
+.close-btn a {
+    color: #fff;
+}
+
+
+/*认证页面 弹窗 end/
