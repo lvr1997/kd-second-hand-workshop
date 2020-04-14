@@ -5,7 +5,7 @@
 <generatorConfiguration>
 
     <!--指定特定数据库的jdbc驱动jar包的位置-->
-    <classPathEntry location="D:\\Project\\mysql-connector-java-5.1.6.jar"/>
+    <classPathEntry location="classpath:mysql-connector-java-5.1.47.jar"/>
 
     <context id="context" targetRuntime="MyBatis3Simple">
         <!-- optional，旨在创建class时，对注释进行控制 -->
@@ -19,7 +19,7 @@
                 userId="root"
                 password="root"
                 driverClass="com.mysql.jdbc.Driver"
-                connectionURL="jdbc:mysql://localhost:3306/erhuo"/>
+                connectionURL="jdbc:mysql://localhost:3306/market"/>
 
 
         <!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制-->
