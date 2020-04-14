@@ -86,7 +86,7 @@ $(function(){
   			$('.captchaCode').focus()
   			return layer.tips('请输入图形验证码', '.captchaCode')
   		}else if($('.checkbox[name=checkbox]:checked').length != 1){
-            return layer.tips('请同意《小二货用户协议》', '.checkbox')
+            return layer.tips('请同意《科大二手工坊用户协议》', '.checkbox')
 		}
 
   		var url = '/user/register'

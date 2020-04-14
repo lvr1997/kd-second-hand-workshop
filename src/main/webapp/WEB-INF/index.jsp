@@ -83,7 +83,7 @@
                             <c:forEach var="item" items="${carousel}">
                                 <li style="display: list-item;">
                                     <a href="${item.url}" target="_blank">
-                                        <img src="<%=basePath%>images/web/${item.imgUrl}" alt="${item.title}" title="${item.title}"></a>
+                                        <img src="<%=basePath%>images/admin/${item.imgUrl}" alt="${item.title}" title="${item.title}"></a>
                                 </li>
                             </c:forEach>
                         </ul>
