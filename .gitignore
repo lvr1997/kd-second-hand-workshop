@@ -1,0 +1,37 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# Mac default file
+*.DS_Store
+
+#Eclipse generate files
+.project
+.classpath
+.settings
+
+#Intellij generate files
+.idea
+*.iml
+
+#maven generate files
+target
+bin
+
+#.gitignore for java
+*.class
+sys/
+catalina.home_IS_UNDEFINED
+/.idea/
+data/
+.idea/.name
+.idea/dataSources.local.xml
+.idea/dataSources.xml
+.idea/dataSources/
+.idea/libraries/
+.idea/uiDesigner.xml
+.idea/workspace.xml
+/.idea/
+/out/
+/.gradle/
+/build/

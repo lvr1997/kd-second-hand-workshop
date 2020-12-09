@@ -15,15 +15,16 @@ public class DictServiceImpl implements com.springmvc.service.DictService {
 
 	@Resource
 	private DictMapper dictMapper;
-	
+
+	@Override
 	public List<Province> getProvinces() {
 		return dictMapper.getProvinces();
 	}
-
+	@Override
 	public List<City> getCities(String provinceCode) {
 		return dictMapper.getCities(provinceCode);
 	}
-
+	@Override
 	public List<Area> getAreas(String cityCode) {
 		return dictMapper.getAreas(cityCode);
 	}
