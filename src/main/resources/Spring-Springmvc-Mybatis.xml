@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/tx
+        https://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--配置spring-springMvc开始-->
+    <!--    1.配置要扫描的包    -->
+    <context:component-scan base-package="com.springmvc"/>
+    <mvc:annotation-driven/>
+    <!--2.静态资源访问-->
+    <mvc:resources location="/js/"  mapping="/js/**" />
+    <mvc:resources location="/css/"  mapping="/css/**" />
+    <mvc:resources location="/images/"  mapping="/images/**" />
+
+    <!--3.配置jsp视图解析器-->
+    <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--配置jstl的视图解析-->
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+    <!--4.设置json格式-->
+    <bean id="mappingJacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>application/json;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 配置文件上传，如果没有使用文件上传可以不用配置，当然如果不配，那么配置文件中也不必引入上传组件包 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 默认编码 -->
+        <property name="defaultEncoding" value="utf-8" />
+        <!-- 文件大小最大值 -->
+        <property name="maxUploadSize" value="10485760000" />
+        <!-- 内存中的最大值 -->
+        <property name="maxInMemorySize" value="40960" />
+    </bean>
+
+    <!--    配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- 设置被拦截器拦截处理的URL -->
+            <!-- 可以设置具体URL如 /demo.do
+            也可以设置 /** 处理任何的URL
+            或者 /user/** 处理 user 路径下的URL  -->
+            <mvc:mapping path="/user/**"/>
+            <!-- 排除的URL, 不被拦截器拦截的URL -->
+            <mvc:exclude-mapping path="/user/toLogin"/>
+            <mvc:exclude-mapping path="/user/login"/>
+            <mvc:exclude-mapping path="/user/check_login"/>
+            <mvc:exclude-mapping path="/user/toRegister"/>
+            <mvc:exclude-mapping path="/user/register"/>
+            <mvc:exclude-mapping path="/user/checkPhone"/>
+            <mvc:exclude-mapping path="/user/checkCode"/>
+            <mvc:exclude-mapping path="/user/search"/>
+            <mvc:exclude-mapping path="/user/collect"/>
+            <mvc:exclude-mapping path="/user/forget_password"/>
+            <mvc:exclude-mapping path="/user/forget"/>
+            <mvc:exclude-mapping path="/user/showAddress"/>
+            <!--<mvc:exclude-mapping path="/user/get_verify_code"/>-->
+            <mvc:exclude-mapping path="/user/search/search"/>
+
+            <!-- 指定拦截器 -->
+            <bean class="com.springmvc.web.AccessInterceptor" />
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <!-- 设置被拦截器拦截处理的URL -->
+            <!-- 可以设置具体URL如 /demo.do
+            也可以设置 /** 处理任何的URL
+            或者 /user/** 处理 user 路径下的URL  -->
+            <mvc:mapping path="/admin/**"/>
+            <!-- 排除的URL, 不被拦截器拦截的URL -->
+
+            <mvc:exclude-mapping path="/admin/toLogin"/>
+            <mvc:exclude-mapping path="/admin/login"/>
+
+
+            <!-- 指定拦截器 -->
+            <bean class="com.springmvc.web.AdminAccessInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+    <!--配置spring-springMvc结束-->
+
+    <!--配置spring-mybatis开始-->
+
+    <!--1.数据库配置-->
+    <bean id="placeholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:jdbc.properties"/>
+    </bean>
+    <!--数据库连接池-->
+    <bean id="datasource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+        <property name="initialSize" value="${initialSize}"/>
+        <property name="minIdle" value="${minIdle}"/>
+        <property name="maxActive" value="${maxActive}"/>
+        <property name="maxWait" value="${maxWait}"/>
+        <property name="filters" value="${filters}"/>
+        <!--通过proxyFilters属性配置监控统计拦截的filters用于统计sql-->
+        <property name="proxyFilters">
+            <list>
+                <ref bean="log4jFilter"/>
+                <ref bean="statFilter"/>
+            </list>
+        </property>
+    </bean>
+    <!--监控统计过滤器配置-->
+    <bean id="statFilter" class="com.alibaba.druid.filter.stat.StatFilter">
+        <!--开启合并sql-->
+        <property name="mergeSql" value="true"/>
+        <!--开启慢查询，200毫秒-->
+        <property name="slowSqlMillis" value="200"/>
+        <!--将执行缓慢的sql打印到日志文件中-->
+        <property name="logSlowSql" value="true"/>
+    </bean>
+    <!--配置监控统计过滤器的日志处理器-->
+    <bean id="log4jFilter" class="com.alibaba.druid.filter.logging.Log4jFilter">
+        <property name="resultSetLogEnabled" value="false"/>
+        <property name="statementExecutableSqlLogEnable" value="true"/>
+    </bean>
+
+    <!--2.配置SqlSessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--数据源-->
+        <property name="dataSource" ref="datasource"/>
+        <!--配置映射文件-->
+        <property name="mapperLocations" value="classpath:com/springmvc/mapper/*.xml"/>
+        <!--配置别名,找到实体类-->
+        <property name="typeAliasesPackage" value="com.springmvc.pojo"/>
+    </bean>
+    <!-- 在spring容器中配置mapper的扫描器产生的动态代理对象在spring的容器中自动注册，bean的id就是mapper类名（首字母小写）-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--一定要注册dao层-->
+        <property name="basePackage" value="com.springmvc.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+
+    <!--3.配置事务管理员-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="datasource"/>
+    </bean>
+    <!--开启事务支持-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <!--    开启aop注解-->
+    <aop:aspectj-autoproxy/>
+</beans>

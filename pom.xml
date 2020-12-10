@@ -20,8 +20,10 @@
     <!-- mybatis版本号 -->
     <mybatis.version>3.2.8</mybatis.version>
     <!-- log4j日志文件管理包版本 -->
-    <slf4j.version>1.7.7</slf4j.version>
-    <log4j.version>1.2.17</log4j.version>
+    <slf4j.version>1.6.6</slf4j.version>
+    <log4j.version>1.2.12</log4j.version>
+    <!-- jackson包版本 -->
+    <jackson.version>2.5.0</jackson.version>
   </properties>
 
   <dependencies>
@@ -115,11 +117,11 @@
       <version>8.0.16</version>
     </dependency>
 
-    <!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->
+    <!--Druid链接数据库-->
     <dependency>
-      <groupId>commons-dbcp</groupId>
-      <artifactId>commons-dbcp</artifactId>
-      <version>1.2.2</version>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.1.10</version>
     </dependency>
 
     <!-- JSTL标签类 -->
@@ -136,12 +138,41 @@
       <version>${log4j.version}</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
 
-    <!-- json -->
+
+    <!-- 格式化对象，方便输出日志 -->
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>fastjson</artifactId>
       <version>1.2.25</version>
+    </dependency>
+
+    <!-- 映入JSON -->
+    <!-- Jackson -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.9.4</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>2.9.4</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.9.4</version>
     </dependency>
 
     <!-- 上传组件包 -->
@@ -196,6 +227,13 @@
       <artifactId>junit</artifactId>
       <version>4.13.1</version>
       <scope>test</scope>
+    </dependency>
+
+    <!--使用AOP代理-->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.9.2</version>
     </dependency>
   </dependencies>
   <build>
