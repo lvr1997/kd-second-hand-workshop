@@ -67,11 +67,11 @@ public class PublishController {
      * @throws IllegalStateException
      * @throws IOException
      */
+    @ResponseBody
     @RequestMapping(value = "/publish/upload",method = RequestMethod.POST)
-    public @ResponseBody
-    Map<String,Object> uploadFile(HttpSession session, @RequestParam("info") MultipartFile fileName) throws IllegalStateException, IOException{
-        //原始名称
-        String oldFileName = fileName.getOriginalFilename(); //获取上传文件的原名
+    public Map<String,Object> uploadFile(HttpSession session, @RequestParam("info") MultipartFile fileName) throws IllegalStateException, IOException{
+        //获取上传文件的原名
+        String oldFileName = fileName.getOriginalFilename();
 
         //存储图片的物理路径
         String file_path = session.getServletContext().getRealPath("images");
