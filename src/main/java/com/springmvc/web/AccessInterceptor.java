@@ -9,6 +9,9 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 
+/**
+ * @author lvr1997
+ */
 @Component
 public class AccessInterceptor implements HandlerInterceptor {
 

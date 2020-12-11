@@ -26,8 +26,6 @@
 
     <!--3.配置jsp视图解析器-->
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <!--配置jstl的视图解析-->
-        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="prefix" value="/WEB-INF"/>
         <property name="suffix" value=".jsp"/>
     </bean>
