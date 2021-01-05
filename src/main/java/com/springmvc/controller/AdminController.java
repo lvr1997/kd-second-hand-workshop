@@ -69,7 +69,7 @@ public class AdminController {
                 if(user.getPassword().equals(word)&&user.getPower()>50) {
                     session.setAttribute("admin",user);
                     map.put("success", true);
-                    map.put("reurl","http://localhost:8080/admin/index");
+                    map.put("reurl","admin/index");
                     map.put("msg", "登录成功");
                 }else{
                     //密码不正确
@@ -314,7 +314,7 @@ public class AdminController {
     public @ResponseBody Map<String,Object> insertCarousel(String title,String imgUrl,String content,String link){
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
-        String url = imgUrl.substring("http://localhost:8080/images/web/".length());
+        String url = imgUrl.substring("http://localhost:8088/images/web/".length());
 
         Carousel carousel = new Carousel(1,title,sdf.format(new Date()),(byte)1,content,link,url);
 
@@ -338,7 +338,7 @@ public class AdminController {
      */
     @RequestMapping(value = "/save_carousel")
     public @ResponseBody Map<String,Object> saveCarousel(Integer id,String title,String imgUrl,String content,String link){
-        String url = imgUrl.substring("http://localhost:8080/images/web/".length());
+        String url = imgUrl.substring("http://localhost:8088/images/web/".length());
         Carousel carousel = new Carousel();
         carousel.setId(id);
         carousel.setTitle(title);

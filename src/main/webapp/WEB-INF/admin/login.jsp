@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: elifen
-  Date: 0007 2018 03 07
-  Time: 19:59
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -20,6 +13,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>登录-科大二手工坊-后台管理</title>
         <script type="text/javascript" src="<%=basePath%>js/jquery.min.js"></script>
+        <script src="<%=basePath%>js/base.js"></script>
         <script type="text/javascript" src="<%=basePath%>js/layui.all.js"></script>
         <script type="text/javascript" src="<%=basePath%>js/layui.js"></script>
         <link type="text/css" id="layuicss-laydatecss" rel="stylesheet" href="<%=basePath%>js/css/modules/laydate/laydate.css">
@@ -54,7 +48,7 @@
                     layer.msg(data.msg)
                     if(data.success){
                         setTimeout(function(){
-                            location.href = data.reurl
+                            location.href = $.basePath + data.reurl
                         }, 2000)
                     }
                 }, function (err) {

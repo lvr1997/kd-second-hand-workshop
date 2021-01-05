@@ -11,7 +11,7 @@
  Target Server Version : 50647
  File Encoding         : 65001
 
- Date: 14/04/2020 21:15:15
+ Date: 15/12/2020 16:06:37
 */
 
 SET NAMES utf8mb4;
@@ -190,7 +190,7 @@ CREATE TABLE `goods`  (
 -- ----------------------------
 -- Records of goods
 -- ----------------------------
-INSERT INTO `goods` VALUES (1, 1, 1, 'Lenovo笔记本', 1000, 3999, '2019-05-19', '2019-05-20', NULL, 2, '15124680346', '1399321915', '15124680346', '1', '3', '9舍', 9, 'Lenovo笔记本  固态硬盘128', 1);
+INSERT INTO `goods` VALUES (1, 1, 1, 'Lenovo笔记本', 1000, 3999, '2019-05-19', '2019-05-20', NULL, 2, '15124680346', '1399321915', '15124680346', '1', '3', '9舍', 12, 'Lenovo笔记本  固态硬盘128', 1);
 INSERT INTO `goods` VALUES (2, 1, 3, 'oppor9s手机', 800, 1399, '2019-05-23', '2019-05-23', NULL, 0, '13019711506', '993830821', '', '1', '3', '学生公寓', 8, 'oppor9s手机，用了一年', 3);
 
 -- ----------------------------
@@ -298,9 +298,9 @@ CREATE TABLE `user`  (
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES (1, '15124680346', 'AASAD', '900150983CD24FB0D6963F7D28E17F72', NULL, '2019-05-19', 1, 10, '2019-06-03', NULL, '', '女', 'b78c6caa-0175-4610-a591-c6aa2917c3aa.png', '', '');
-INSERT INTO `user` VALUES (2, '17611056916', '17611056916', '47BCE5C74F589F4867DBD57E9CA9F808', NULL, '2019-05-19', 0, 60, '2019-05-19', NULL, '2019-05-19', '男', 'b78c6caa-0175-4610-a591-c6aa2917c3aa.png', NULL, NULL);
+INSERT INTO `user` VALUES (2, '17611056916', '17611056916', '47BCE5C74F589F4867DBD57E9CA9F808', NULL, '2019-05-19', 0, 100, '2020-10-12', NULL, '2019-05-19', '男', 'b78c6caa-0175-4610-a591-c6aa2917c3aa.png', NULL, NULL);
 INSERT INTO `user` VALUES (3, '13019711506', '西瓜是咸的', 'E10ADC3949BA59ABBE56E057F20F883E', NULL, '2019-05-23', 1, 10, '2019-05-23', NULL, '1989-05-26', '男', '73a35a75-35ab-4f04-9916-17dbd17c22df.png', '黑龙江-哈尔滨市-松北区', '');
-INSERT INTO `user` VALUES (4, '15232103749', 'you', 'E10ADC3949BA59ABBE56E057F20F883E', NULL, '2020-04-14', 0, 10, '2020-04-14', NULL, '1998-04-09', '男', 'b78c6caa-0175-4610-a591-c6aa2917c3aa.png', '黑龙江-哈尔滨市-南岗区', '');
+INSERT INTO `user` VALUES (4, '15232103749', 'you', 'E10ADC3949BA59ABBE56E057F20F883E', NULL, '2020-04-14', 0, 10, '2020-12-13', NULL, '1998-04-09', '男', 'b78c6caa-0175-4610-a591-c6aa2917c3aa.png', '黑龙江-哈尔滨市-南岗区', '');
 
 -- ----------------------------
 -- Table structure for wanted
@@ -312,6 +312,11 @@ CREATE TABLE `wanted`  (
   `good_id` int(11) DEFAULT NULL,
   `create_at` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of wanted
+-- ----------------------------
+INSERT INTO `wanted` VALUES (1, 4, 1, '2020-09-20');
 
 SET FOREIGN_KEY_CHECKS = 1;

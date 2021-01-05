@@ -147,10 +147,10 @@ public class UserController {
     @RequestMapping("/toLogin")
     public String toLogin(HttpServletRequest request){
         //获得前一个页面的头地址信息，保存下来
-        if("http://localhost:8080/user/forget_password".equals(request.getHeader("Referer"))
-                || "http://localhost:8080/user/register".equals(request.getHeader("Referer"))
-                || "http://localhost:8080/user/toRegister".equals(request.getHeader("Referer"))){
-            loginReferer = "http://localhost:8080/goods/index";
+        if("http://localhost:8088/user/forget_password".equals(request.getHeader("Referer"))
+                || "http://localhost:8088/user/register".equals(request.getHeader("Referer"))
+                || "http://localhost:8088/user/toRegister".equals(request.getHeader("Referer"))){
+            loginReferer = "http://localhost:8088/goods/index";
         }else{
             loginReferer = request.getHeader("Referer");
         }
@@ -268,8 +268,7 @@ public class UserController {
         ModelMap map = new ModelMap();
         //判断验证码
         if(checkCode.equals(checkcode)){
-            //验证码正确，执行插入注册信息
-            try{
+                                         try{
                 //设置用户信息初始值
                 user.setUsername(user.getPhone());
                 user.setPassword(MD5.md5(user.getPassword()));
