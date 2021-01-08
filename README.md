@@ -23,13 +23,41 @@
 
 **端口号暂时固定为8088，不要更改其它的tomact端口号**
 
-访问网址：localhost:8088/ 
+访问网址：localhost:8088/goods/index
 
-学生用户登录 账号：15232103749 密码：123456
+学生用户登录 15232103749/123456
 
 管理页面登录：localhost:8088/admin/toLogin
 
 系统管理员用户登录  17611056916/aaa
+
+### 项目中可能遇到的问题
+
+#### 关于上传的图片无法显示的问题
+
+解决方案如下：
+
+1. 编辑Tomcat配置
+
+![](https://gitee.com/lvr1997/PicGioRepository/raw/master/img/PKT(~Y~@W3{T4GLV$NN)IK5.png)
+
+2. 点击Deployment，点击加号
+
+![](https://gitee.com/lvr1997/PicGioRepository/raw/master/img/U2XACY}J8FJ56JLUXGE}8CB.png)
+
+3. 选择External Source
+
+![](https://gitee.com/lvr1997/PicGioRepository/raw/master/img/NXRP]UE3GQI81YQFYS$B1VB.png)
+
+4. 选择项目下的 images目录，点击ok
+
+![](https://gitee.com/lvr1997/PicGioRepository/raw/master/img/WPZ6O}J3V[1_1F70GNO9{DA.png)
+
+5. 
+
+![](https://gitee.com/lvr1997/PicGioRepository/raw/master/img/YQK$_2U[EY8STNNJO({0@SS.png)
+
+6. 重启`Tomcat`
 
 ## 更新情况
 
