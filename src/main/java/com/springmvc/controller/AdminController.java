@@ -69,7 +69,7 @@ public class AdminController {
                 if(user.getPassword().equals(word)&&user.getPower()>50) {
                     session.setAttribute("admin",user);
                     map.put("success", true);
-                    map.put("reurl","admin/index");
+                    map.put("reurl","http://localhost:8088/admin/index");
                     map.put("msg", "登录成功");
                 }else{
                     //密码不正确
