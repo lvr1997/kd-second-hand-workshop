@@ -53,11 +53,7 @@
 
 ![](https://gitee.com/lvr1997/PicGioRepository/raw/master/img/WPZ6O}J3V[1_1F70GNO9{DA.png)
 
-5. 
-
-![](https://gitee.com/lvr1997/PicGioRepository/raw/master/img/YQK$_2U[EY8STNNJO({0@SS.png)
-
-6. 重启`Tomcat`
+5. 重启`Tomcat`
 
 ## 更新情况
 
