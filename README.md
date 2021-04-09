@@ -1,6 +1,6 @@
 # 科大二手工坊
 
-#### 基于科大二手工坊的V2.0版本  （[科大商铺](https://github.com/lvr1997/kd-shop)） 基于SpringBoot2.x + Vue2.x实现；项目目前正在完善中，欢迎各位小伙伴们学习！
+#### 基于科大二手工坊的V2.0版本  （[科大商铺](https://gitee.com/kd-shop)） 基于SpringBoot2.x + Vue2.x实现；项目目前正在完善中，欢迎各位小伙伴们学习！
 
 **写在前面：**
 
