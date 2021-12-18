@@ -16,17 +16,35 @@
 
 安装运行环境：
 
-1. jdk1.8   
-2. Tomact8或Tomcat8.5
-3. maven3.5
+1. `jdk1.8` 
+2. `Tomact8`或`Tomcat8.5`
+3. `maven3.5`
 
 数据库：MySQL 
+
+## 启动项目
+
+1. 使用IDEA打开项目
+
+2. 编辑Tomcat配置
+
+![images](https://github.com/lvr1997/kd-second-hand-workshop/screenshoot/QQ截图20211218171208.png)
+
+3. 配置Tomcat路径、jre环境、端口号
+
+![images](https://github.com/lvr1997/kd-second-hand-workshop/screenshoot/QQ图片20211218171636.png)
+
+4. 将项目war包添加至tomcat中
+
+![images](https://github.com/lvr1997/kd-second-hand-workshop/screenshoot/QQ图片20211218172006.png)
+
+5. 启动项目访问网址：localhost:8088/goods/index
 
 ## 项目说明
 
 **端口号暂时固定为8088，不要更改其它的tomact端口号**
 
-**不建议用Tomcat9哦！版本过高可能会出现不兼容的问题**
+**不建议用Tomcat9哦！版本过高会出现不兼容的问题**
 
 访问网址：localhost:8088/goods/index
 
@@ -38,29 +56,7 @@
 
 ### 项目中可能遇到的问题
 
-#### 关于上传的图片无法显示的问题
 
-方案一：最直接最有效的解决办法：换成`Tomcat7.0`版本
-
-方案二：如果你使用的是`Tomcat8.0`及以上版本解决方案如下：
-
-1. 编辑Tomcat配置
-
-![](https://gitee.com/lvr1997/PicGioRepository/raw/master/img/PKT(~Y~@W3{T4GLV$NN)IK5.png)
-
-2. 点击Deployment，点击加号
-
-![](https://gitee.com/lvr1997/PicGioRepository/raw/master/img/U2XACY}J8FJ56JLUXGE}8CB.png)
-
-3. 选择External Source
-
-![](https://gitee.com/lvr1997/PicGioRepository/raw/master/img/NXRP]UE3GQI81YQFYS$B1VB.png)
-
-4. 选择项目下的 images目录，点击ok
-
-![](https://gitee.com/lvr1997/PicGioRepository/raw/master/img/WPZ6O}J3V[1_1F70GNO9{DA.png)
-
-5. 重启`Tomcat`
 
 ## 更新情况
 
