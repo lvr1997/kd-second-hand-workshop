@@ -48,7 +48,6 @@
                     layer.msg(data.msg)
                     if(data.success){
                         setTimeout(function(){
-                            console.log($.basePath)
                             location.href = data.reurl
                         }, 2000)
                     }

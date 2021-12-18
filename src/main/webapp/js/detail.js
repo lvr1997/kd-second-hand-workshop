@@ -38,7 +38,7 @@ $(function() {
         //收藏
         $('.want').click(function() {
             if ($('.want i').hasClass('wanted')) {
-                return layer.msg('您已经收藏过该二货了哦~')
+                return layer.msg('您已经收藏过该闲置了哦~')
             }
             var url = '/user/collect'
             var Data = {

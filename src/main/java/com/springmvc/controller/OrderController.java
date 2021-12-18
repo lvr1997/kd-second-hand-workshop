@@ -1,5 +1,10 @@
 package com.springmvc.controller;
 
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.EncodeHintType;
+import com.google.zxing.client.j2se.MatrixToImageWriter;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
 import com.springmvc.pojo.Goods;
 import com.springmvc.pojo.Orders;
 import com.springmvc.pojo.User;
@@ -13,7 +18,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -32,7 +42,6 @@ public class OrderController {
 
     @Resource
     private OrdersService ordersService;
-
 
     @RequestMapping(value = "/orderConfirm")
     public ModelAndView orderConfirm(HttpSession session){

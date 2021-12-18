@@ -39,8 +39,8 @@ public class HomeController {
 
 
     /**
-     * 首页显示商品，查询所有的商品，按照商品刷新时间排序
-     * 左侧显示浏览量最多的商品数据，按照浏览数排序
+     * 首页显示 闲置，查询所有的 闲置，按照 闲置刷新时间排序
+     * 左侧显示浏览量最多的 闲置数据，按照浏览数排序
      * 首页显示分类数据，放入分类菜单
      * @return
      */
@@ -98,9 +98,9 @@ public class HomeController {
     }
 
     /**
-     * 处理商品和图片之间的关联
-     * @param goodsList 商品图片集合
-     * @return  商品图片集合
+     * 处理 闲置和图片之间的关联
+     * @param goodsList  闲置图片集合
+     * @return   闲置图片集合
      */
     public List<GoodsExtend> handlerGoodsAndView(List<Goods> goodsList){
         List<GoodsExtend> goodsAndImage = new ArrayList<GoodsExtend>();
@@ -117,7 +117,7 @@ public class HomeController {
     }
 
     /**
-     * 查询该类商品
+     * 查询该类 闲置
      * @param cid
      * 要求该参数不为空
      * @return

@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="publish fr">
-            <a href="/publish/publish" class="publish-btn"><i class="icon"></i>发布二货</a>
+            <a href="/publish/publish" class="publish-btn"><i class="icon"></i>发布闲置</a>
         </div>
     </div>
 </div>

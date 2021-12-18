@@ -33,7 +33,7 @@ public class GoodsController {
     private UserService userService;
 
     /**
-     * 根据商品id查询该商品详细信息
+     * 根据 闲置id查询该 闲置详细信息
      * @param id
      * @return
      * @throws Exception
@@ -50,7 +50,7 @@ public class GoodsController {
 
         //五件闲置物品的集合
         List<Goods> commendGoods = new ArrayList<Goods>();
-        //找出所有商品的id
+        //找出所有 闲置的id
         List<Goods> list = goodsService.selectPrimaryKey();
 
         for(int i=0;i<=5;i++){
@@ -71,7 +71,7 @@ public class GoodsController {
         Goods goodsFind = goodsService.selectByPrimaryKey(id);
         goodsService.updateViewCountByPrimaryKey(id,goodsFind.getViewcount()+1);
         Goods goods = goodsService.selectByPrimaryKey(id);
-        //找出当前商品的用户信息
+        //找出当前 闲置的用户信息
         User seller = userService.selectByPrimaryKey(goods.getUserId());
         //找出分类信息
         Catelog catelog = catelogService.selectByPrimaryKey(goods.getCatelogId());

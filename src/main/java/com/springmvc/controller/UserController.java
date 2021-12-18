@@ -331,7 +331,7 @@ public class UserController {
     public @ResponseBody Map<String,Object> received(HttpSession session){
         Map<String,Object> map = new HashMap<String,Object>();
         User user = (User)session.getAttribute("cur_user");
-        //查找自己商品的回复
+        //查找自己 闲置的回复
         List<Goods> goods = goodsService.getGoodsByUserId(user.getId());
         List<Comments> commentsList = new ArrayList<Comments>();
         for(Goods good:goods){
@@ -401,7 +401,7 @@ public class UserController {
         for (Wanted wanted:wantedList) {
             WantedExtend wantedExtend = new WantedExtend();
             GoodsExtend goodsExtend = new GoodsExtend();
-            //获取收藏的商品信息
+            //获取收藏的 闲置信息
             Goods good = goodsService.selectByPrimaryKey(wanted.getGoodId());
             if (good != null) {
                 List<Image> images = imageService.selectByGoodsPrimaryKey(good.getId());
@@ -482,7 +482,7 @@ public class UserController {
 
     /**
      * 处理请求我发布的闲置
-     * 查询出所有的用户商品以及商品对应的图片
+     * 查询出所有的用户 闲置以及 闲置对应的图片
      * @return  返回的model为 goodsAndImage对象,该对象中包含goods 和 images，参考相应的类
      */
     @RequestMapping(value = "/index")

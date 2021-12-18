@@ -44,7 +44,7 @@
             </div>
         </div>
         <div id="main" class="clearfix">
-            <h2>发布 商品</h2>
+            <h2>发布 闲置</h2>
             <div class="publish-main layui-form layui-form-pane">
                 <div class="input-line image">
                     <div class="layui-box layui-upload-button">
@@ -67,16 +67,16 @@
                     <%--<div class="layui-form-mid layui-word-aux">注：没有找到对应学校时，请选择“黑龙江科技大学”</div>--%>
                 </div>
                 <div class="layui-form-item input-line">
-                    <label class="layui-form-label">商品名称</label>
+                    <label class="layui-form-label"> 闲置名称</label>
                     <div class="layui-input-inline" style="width: 390px;">
-                        <input type="text" name="title" autocomplete="off" placeholder="请输入商品名称" class="layui-input goods-title">
+                        <input type="text" name="title" autocomplete="off" placeholder="请输入 闲置名称" class="layui-input goods-title">
                     </div>
                     <div class="layui-form-mid layui-word-aux">14个字以内</div>
                 </div>
                 <div class="layui-form-item layui-form-text input-line">
-                    <label class="layui-form-label good-description">商品详情</label>
+                    <label class="layui-form-label good-description"> 闲置详情</label>
                     <div class="layui-input-block">
-                        <textarea placeholder="请输入商品详情" class="layui-textarea goods-des"></textarea>
+                        <textarea placeholder="请输入 闲置详情" class="layui-textarea goods-des"></textarea>
                     </div>
                 </div>
                 <div class="layui-form-item input-line" id="price">
@@ -152,7 +152,7 @@
 
                     <p class="tips">本站所有信息均为用户自由发布，本站不对信息的真实性负任何责任，交易时请注意识别信息的真假如有网站内容侵害了您的权益请联系我们删除</p>
                     <p class="right">
-                        <span>Copyright © 2017-2018, Xiaoerhuo, All Rights Reserved</span>
+                        <span>Copyright © 2017-2018,   All Rights Reserved</span>
                     </p>
                 </div>
             </div>

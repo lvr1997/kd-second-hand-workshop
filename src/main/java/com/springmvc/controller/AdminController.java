@@ -359,8 +359,9 @@ public class AdminController {
      * @param fileName
      * @return
      */
-    @RequestMapping(value = "/fileUpload")
-    public @ResponseBody Map<String,Object> fileUpload(HttpSession session,@RequestParam("avatar") MultipartFile fileName){
+    @ResponseBody
+    @RequestMapping(value = "/fileUpload", produces = "application/json")
+    public Map<String,Object> fileUpload(HttpSession session,@RequestParam("avatar") MultipartFile fileName){
         String oldFileName = fileName.getOriginalFilename(); //获取上传文件的原名
         //存储图片的物理路径
         String file_path = session.getServletContext().getRealPath("images");
@@ -716,6 +717,7 @@ public class AdminController {
             ordersExtends.add(ordersExtend);
         }
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("/admin/order");
         modelAndView.addObject("ordersExtends",ordersExtends);
         return modelAndView;
     }

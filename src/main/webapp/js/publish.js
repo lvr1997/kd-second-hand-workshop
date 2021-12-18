@@ -69,9 +69,9 @@ $(function () {
 		}
 		$('.city').parent('.layui-input-inline').find('input').removeClass('no-data')
 
-		//检测商品名称
+		//检测 闲置名称
 		if (!($('.goods-title').val() && $('.goods-title').val().length < 14)) {
-			layer.msg('请输入商品名称 且 长度不得超过14字')
+			layer.msg('请输入 闲置名称 且 长度不得超过14字')
 			$("html,body").animate({
 				scrollTop: $('.goods-title').parent('.layui-input-inline').offset().top - 5
 			}, 500)
@@ -80,9 +80,9 @@ $(function () {
 		}
 		$('.goods-title').parent('.layui-input-inline').find('input').removeClass('no-data')
 
-		//检测商品详情
+		//检测 闲置详情
 		if (!($('.goods-des').val() && $('.goods-des').val().length > 10 && $('.goods-des').val().length < 500)) {
-			layer.msg('请输入商品描述 且 长度必须在 10 - 500 字之间')
+			layer.msg('请输入 闲置描述 且 长度必须在 10 - 500 字之间')
 			$("html,body").animate({
 				scrollTop: $('.goods-des').parent('.layui-input-block').offset().top - 5
 			}, 500)
@@ -93,7 +93,7 @@ $(function () {
 
 		//检测价格
 		if (!$('.price').val()) {
-			layer.msg('请输入商品价格')
+			layer.msg('请输入 闲置价格')
 			$("html,body").animate({
 				scrollTop: $('.price').parent('.layui-input-inline').offset().top - 5
 			}, 500)
@@ -102,7 +102,7 @@ $(function () {
 		}
 		var priceReg = /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/
 		if (!priceReg.test($('.price').val())) {
-			layer.msg('请输入正确的商品价格，如：0.00')
+			layer.msg('请输入正确的 闲置价格，如：0.00')
 			$("html,body").animate({
 				scrollTop: $('.price').parent('.layui-input-inline').offset().top - 5
 			}, 500)
@@ -113,7 +113,7 @@ $(function () {
 
 		//检测原价
 		if (!$('.original-price').val()) {
-			layer.msg('请输入商品价格')
+			layer.msg('请输入 闲置价格')
 			$("html,body").animate({
 				scrollTop: $('.original-price').parent('.layui-input-inline').offset().top - 5
 			}, 500)
@@ -121,7 +121,7 @@ $(function () {
 			return false
 		}
 		if (!priceReg.test($('.original-price').val())) {
-			layer.msg('请输入正确的商品价格，如：0.00')
+			layer.msg('请输入正确的 闲置价格，如：0.00')
 			$("html,body").animate({
 				scrollTop: $('.original-price').parent('.layui-input-inline').offset().top - 5
 			}, 500)

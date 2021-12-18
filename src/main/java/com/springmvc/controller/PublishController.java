@@ -60,7 +60,7 @@ public class PublishController {
     }
 
     /**
-     * 上传商品图片
+     * 上传 闲置图片
      * @param session session信息
      * @param fileName 图片文件名
      * @return
@@ -100,7 +100,7 @@ public class PublishController {
     }
 
     /**
-     * 删除上传的缓存商品图片
+     * 删除上传的缓存 闲置图片
      * @param session session信息
      * @param fileName 图片名称
      * @return

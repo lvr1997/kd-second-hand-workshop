@@ -74,7 +74,7 @@
             <p>支付失败</p>
             <span><a href="#">查看订单状态？ </a><b><a href="#">查看订单&gt;&gt;</a></b></span>
             <br/>
-            小二货不会以系统异常、订单升级为由，要求你点击任何链接进行退款操作！
+            科大二手工坊不会以系统异常、订单升级为由，要求你点击任何链接进行退款操作！
         </div>
 
     </div>
@@ -89,7 +89,7 @@
 
             <p class="tips">本站所有信息均为用户自由发布，本站不对信息的真实性负任何责任，交易时请注意识别信息的真假如有网站内容侵害了您的权益请联系我们删除</p>
             <p class="right">
-                <span>Copyright © 2017-2018, Xiaoerhuo, All Rights Reserved</span>　
+                <span>Copyright © 2017-2018,   All Rights Reserved</span>　
             </p>
         </div>
     </div>

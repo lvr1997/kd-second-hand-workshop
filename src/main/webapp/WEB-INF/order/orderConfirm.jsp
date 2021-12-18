@@ -100,12 +100,12 @@
                 更多地址 &gt;&gt;
             </a>
         </div>
-        <!-- 商品信息-->
+        <!--  闲置信息-->
         <form name="" method="post" action="#">
             <div class="product_confirm">
-                <p>确认商品信息</p>
+                <p>确认 闲置信息</p>
                 <ul class="item_title">
-                    <li class="p_info">商品信息</li>
+                    <li class="p_info"> 闲置信息</li>
                     <li class="p_price">单价(元)</li>
                     <li class="p_count">数量</li>
                     <li class="p_tPrice">金额</li>
@@ -136,7 +136,7 @@
             <span class="count_bar_info">
                 已选
                 <b  id="count"> 1 </b>
-                    件商品&nbsp;&nbsp;合计(不含运费):
+                    件 闲置&nbsp;&nbsp;合计(不含运费):
                 <b class="zj"></b>
                 <input type="hidden" name="Payment" value="${good.price}"/>元
             </span>
@@ -153,7 +153,7 @@
 
                 <p class="tips">本站所有信息均为用户自由发布，本站不对信息的真实性负任何责任，交易时请注意识别信息的真假如有网站内容侵害了您的权益请联系我们删除</p>
                 <p class="right">
-                    <span>Copyright © 2017-2018, Xiaoerhuo, All Rights Reserved</span>　
+                    <span>Copyright © 2017-2018,   All Rights Reserved</span>　
                 </p>
             </div>
         </div>

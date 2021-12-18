@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <div class="publish fr">
-                    <a href="/publish/publish" class="publish-btn"><i class="icon"></i>发布商品</a>
+                    <a href="/publish/publish" class="publish-btn"><i class="icon"></i>发布 闲置</a>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
             <div class="detail fl clearfix">
 
                 <div class="title">
-                    <!-- <h2>商品标题商品标题</h2> -->
+                    <!-- <h2> 闲置标题 闲置标题</h2> -->
                     <span class="publish-time fl">更新于：${goodsExtend.goods.polishTime}</span>
                     <span class="view-number fl">${goodsExtend.goods.viewcount}次浏览</span>
 
@@ -144,7 +144,7 @@
                     </div>
                 </div>
                 <div class="good-description">
-                    <div class="description-title"><span>商品描述</span></div>
+                    <div class="description-title"><span> 闲置描述</span></div>
                     <div class="description-body">
                         <p>
                             ${goodsExtend.goods.describle}
@@ -152,7 +152,7 @@
                     </div>
                 </div>
                 <div class="good-description">
-                    <div class="description-title"><span>商品留言</span></div>
+                    <div class="description-title"><span> 闲置留言</span></div>
                     <div class="description-body">
                         <div class="comment-list">
                             <ul>
@@ -182,7 +182,7 @@
 
             </div>
             <div class="detail-sidebar fr">
-                <div class="sidebar-header">推荐二货</div>
+                <div class="sidebar-header">推荐闲置</div>
                 <ul class="sidebar-list">
                     <c:forEach var="item" items="${commend}">
                         <li>
@@ -240,7 +240,7 @@
                 <div class="footer-bottom">
                     <p class="tips">本站所有信息均为用户自由发布，本站不对信息的真实性负任何责任，交易时请注意识别信息的真假如有网站内容侵害了您的权益请联系我们删除</p>
                     <p class="right">
-                        <span>Copyright © 2017-2018, Xiaoerhuo, All Rights Reserved</span>　
+                        <span>Copyright © 2017-2018,   All Rights Reserved</span>　
 
                     </p>
                 </div>

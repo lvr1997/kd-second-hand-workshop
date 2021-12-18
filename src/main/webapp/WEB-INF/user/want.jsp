@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>我想要的-二手商品-科大二手工坊</title>
+    <title>我想要的-二手 闲置-科大二手工坊</title>
     <script src="<%=basePath%>js/jquery.min.js"></script>
     <script src="<%=basePath%>js/layui.all.js"></script>
     <link id="layuicss-laydatecss" rel="stylesheet" href="<%=basePath%>js/css/modules/laydate/laydate.css" media="all">
@@ -68,7 +68,7 @@
         <ul>
             <c:if test="${empty wantedList}">
                 <div class="no-data">
-                    <p>您没有收藏任何商品哦~</p>
+                    <p>您没有收藏任何 闲置哦~</p>
                 </div>
             </c:if>
             <c:if test="${!empty wantedList}">
