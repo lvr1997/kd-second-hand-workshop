@@ -28,15 +28,15 @@
 
 2. 编辑Tomcat配置
 
-![images](https://github.com/lvr1997/kd-second-hand-workshop/screenshoot/QQ截图20211218171208.png)
+![QQ截图20211218171208.png](https://s2.loli.net/2021/12/18/UJR5dW6LDYjvIbt.png)
 
 3. 配置Tomcat路径、jre环境、端口号
 
-![images](https://github.com/lvr1997/kd-second-hand-workshop/screenshoot/QQ图片20211218171636.png)
+![QQ图片20211218171636.png](https://s2.loli.net/2021/12/18/H28jI7PM5yvNUAL.png)
 
 4. 将项目war包添加至tomcat中
 
-![images](https://github.com/lvr1997/kd-second-hand-workshop/screenshoot/QQ图片20211218172006.png)
+![QQ图片20211218172006.png](https://s2.loli.net/2021/12/18/RveWbpOrSstMgUi.png)
 
 5. 启动项目访问网址：localhost:8088/goods/index
 
