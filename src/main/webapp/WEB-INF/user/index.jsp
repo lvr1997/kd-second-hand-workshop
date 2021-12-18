@@ -89,7 +89,7 @@
                         <div class="list-main clearfix">
                             <a href="<%=basePath%>detail/detail/${item.goods.id}" class="goods-images fl"><img src="<%=basePath%>images/web/${item.images[0].imgUrl}" ></a>
                             <div class="good-info fl">
-                                <a href="<%=basePath%>detail/detail/${item.goods.id}" class="goods-title"><c:out value="${item.goods.name}"></c:out></a>
+                                <p href="#" class="goods-title"><c:out value="${item.goods.name}"></c:out></p>
                                 <p class="goods-price">￥<span><c:out value="${item.goods.price}"></c:out></span></p>
                             </div>
                             <div class="operation fr">
