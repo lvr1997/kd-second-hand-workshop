@@ -10,9 +10,14 @@
 基于SSM的校园二手物品交易平台
 （项目包括前台和后台）
 
-## 部分截图
+
+### 首页截图
 
 ![image.png](https://s2.loli.net/2021/12/18/pT2a8w1PgmKlQUk.png)
+
+### 后台截图
+
+![image.png](https://s2.loli.net/2021/12/18/aehXmsMySWorbZI.png)
 
 ## 运行环境
 
