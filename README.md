@@ -48,7 +48,7 @@
 
 ### 项目中可能遇到的问题
 
-**可以在这里提交issues：**[项目遇到的问题和建议看这里 · Issue #19 · lvr1997/kd-second-hand-workshop (github.com)](https://github.com/lvr1997/kd-second-hand-workshop/issues/19)
+**可以在这里提交issues：**[【科大二手工坊】项目中遇到的问题及解决方案](https://github.com/lvr1997/kd-second-hand-workshop/issues/19)
 
 **PS: 如果感兴趣的话可以添加qq群 696224249 一起讨论哦^v^**
 
