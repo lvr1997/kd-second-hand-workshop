@@ -36,7 +36,9 @@
                 </ul>
                 <div class="nav-right fr">
                     <c:if test="${!empty cur_user}">
-                        <a href="/user/index" class="log-btn"><img src="<%=basePath%>images/web/user/${cur_user.imgUrl}" class="user-header-image">${cur_user.username}</a>
+                        <a href="/user/index" class="log-btn">
+                            <img src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort() %>/images/user/${cur_user.imgUrl}" class="user-header-image">
+                                ${cur_user.username}</a>
                         <a href="/user/logout" class="log-btn">退出</a>
                     </c:if>
                 </div>
@@ -45,7 +47,7 @@
         <div id="main" class="clearfix">
             <div class="user-sider fl">
                 <div class="user-info">
-                    <img src="<%=basePath%>images/web/user/${cur_user.imgUrl}" class="user-header">
+                    <img src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort() %>/images/user/${cur_user.imgUrl}" class="user-header">
                     <a href="/user/userinfo" class="username">${cur_user.username}</a>
                     <%--<div class="auth">--%>
                         <%--<a class="realname-auth" href="/user/auth"><i class="icon" title="未实名认证"></i></a>--%>
@@ -71,7 +73,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label picture-para">头像</label>
                         <div class="layui-input-block">
-                            <img src="<%=basePath%>images/web/user/${cur_user.imgUrl}" class="user-info-picture">
+                            <img src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort() %>/images/user/${cur_user.imgUrl}" class="user-info-picture">
                             <div class="layui-box layui-upload-button">
                                 <form target="layui-upload-iframe"  key="set-mine" enctype="multipart/form-data">
                                     <input type="file" name="avatar" lay-type="images" class="change-picture" value="修改头像">
@@ -96,19 +98,22 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label"><em>*</em>　性别</label>
                         <div class="layui-input-inline sex-wrap">
-                            <input type="radio" name="sex" value="男" title="男"><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><span>男</span></div>
-                            <input type="radio" name="sex" value="女" title="女"><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><span>女</span></div>
+                            <input type="radio" name="sex" value="男" <c:if test="${cur_user.sex eq '男'}">checked="checked"</c:if> title="男"><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><span>男</span></div>
+                            <input type="radio" name="sex" value="女" <c:if test="${cur_user.sex eq '女'}">checked="checked"</c:if> title="女"><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><span>女</span></div>
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">生日</label>
                         <div class="layui-input-inline">
-                            <input class="layui-input birthday" placeholder="" onclick="layui.laydate({elem: this})" value="">
+                            <input class="layui-input birthday" placeholder="${cur_user.birthday}" onclick="layui.laydate({elem: this})" value="">
                         </div>
                         <div class="layui-form-mid layui-word-aux">（该信息其他人不可见）</div>
                     </div>
                     <div class="layui-form-item area" data-area="">
                         <label class="layui-form-label">所在地区</label>
+                        <div class="layui-input-inline">
+                            <input class="layui-input" value="${cur_user.residence}" type="text" readonly>
+                        </div>
                         <div class="layui-input-inline">
                             <select id="province" name="province">
                                 <option value="请选择">请选择省份</option>

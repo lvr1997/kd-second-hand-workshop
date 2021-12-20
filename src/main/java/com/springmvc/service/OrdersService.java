@@ -28,4 +28,7 @@ public interface OrdersService {
     Orders selectOrdersByGoodId(Integer goodId);
 
 
+    Double getSpendByUserId(Integer userId);
+
+    Double getIncomeByUserId(Integer userId);
 }

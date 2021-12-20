@@ -28,4 +28,7 @@ public interface OrdersMapper {
     Orders selectOrdersByGoodId(@Param("goodId") Integer goodId);
 
 
+    Double getSpendByUserId(@Param("userId") Integer userId);
+
+    Double getIncomeByUserId(@Param("userId") Integer userId);
 }

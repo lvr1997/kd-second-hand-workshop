@@ -67,7 +67,7 @@ $(function(){
             method: 'post', //上传接口的http类型
             success: function(data){
                 if(data.success){
-                    $('.user-info-picture').attr('src', '../../images/web/user/'+data.data.src)
+                    $('.user-info-picture').attr('src', 'http://localhost:8088/images/user/'+data.data.src)
                     // article.image = data.data.src
                     layer.msg('头像上传成功')
                     setTimeout('location.reload()', 800)

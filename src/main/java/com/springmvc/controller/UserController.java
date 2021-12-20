@@ -493,21 +493,10 @@ public class UserController {
         List<GoodsExtend> goodsAndImage = homeController.handlerGoodsAndView(goodsList);
 
         //计算收入 根据发布的物品id查询
-        float income = 0.0f;
-        for(int i=0; i<goodsList.size(); i++){
-            Orders orders = ordersService.selectOrdersByGoodId(goodsList.get(i).getId());
-            if (orders != null){
-                Goods goods = goodsService.selectByPrimaryKey(orders.getGoodId());
-                income += goods.getPrice();
-            }
-        }
+        Double income = ordersService.getIncomeByUserId(userId);
         //计算支出 根据当前用户id查询
-        List<Orders>  orde= ordersService.selectOrdersByUserId(userId);
-        float spend = 0.0f;
-        for(int i=0;i<orde.size();i++){
-            Goods goods = goodsService.selectByPrimaryKey(orde.get(i).getGoodId());
-            spend += goods.getPrice();
-        }
+        Double spend= ordersService.getSpendByUserId(userId);
+
         ModelAndView mv = new ModelAndView();
         mv.addObject("goodsAndImage",goodsAndImage);
         mv.addObject("income",income);
@@ -527,15 +516,23 @@ public class UserController {
      * @throws IllegalStateException
      * @throws IOException
      */
-    @RequestMapping(value = "/avatar_upload/{id}",method = RequestMethod.POST)
-    public @ResponseBody
-    Map<String,Object> avatarUpload(HttpSession session, @RequestParam("avatar") MultipartFile fileName, @PathVariable("id") Integer id)throws IllegalStateException, IOException{
+    @ResponseBody
+    @RequestMapping(value = "/avatar_upload/{id}", produces = "application/json")
+    public Map<String,Object> avatarUpload(HttpSession session, HttpServletRequest request,
+                                           @RequestParam("avatar") MultipartFile fileName,
+                                           @PathVariable("id") Integer id)throws IllegalStateException, IOException{
 
         User user = (User)session.getAttribute("cur_user");
         String oldFileName = fileName.getOriginalFilename(); //获取上传文件的原名
 
         //存储图片的物理路径
-        String file_path = session.getServletContext().getRealPath("images");
+        File rootPath = new File(request.getServletContext().getRealPath("/")).getParentFile();
+        File uploadFile = new File(rootPath.getPath()+"/images/user/");
+
+        if(!uploadFile.exists()){
+            uploadFile.mkdirs();
+        }
+
 
         //上传图片
         if(fileName!=null && oldFileName!=null && oldFileName.length()>0){
@@ -550,9 +547,9 @@ public class UserController {
 
             if(user_new.getImgUrl()!=null){
                 //新图片
-                File newFile = new File(file_path+"/web/user/"+newFileName);
+                String url = rootPath.getPath()+"/images/user/" + newFileName;
                 //将内存中的数据写入磁盘
-                fileName.transferTo(newFile);
+                fileName.transferTo(new File(url));
                 //将新图片名称返回到前端
                 Map<String,Object> map=new HashMap<String,Object>();
                 Map<String,Object> data=new HashMap<String,Object>();

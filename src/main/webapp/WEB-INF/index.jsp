@@ -113,8 +113,8 @@
                             <c:forEach var="item" items="${Goods1}">
                                 <li>
                                     <a href="<%=basePath%>detail/detail/${item.goods.id}" target="_blank" class="good-image">
-                                        <img class="image-show-box" src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort() %>/${item.images[0].imgUrl} />
-                                        <img class="image-real-box" src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort() %>/${item.images[0].imgUrl} />
+                                        <img class="image-show-box" src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort() %>/images/web/${item.images[0].imgUrl} />
+                                        <img class="image-real-box" src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort() %>/images/web/${item.images[0].imgUrl} />
 <%--                                        <img class="image-show-box" src="<%=basePath%>images/web/${item.images[0].imgUrl}">--%>
 <%--                                        <img class="image-real-box" src="<%=basePath%>images/web/${item.images[0].imgUrl}" alt="<c:out value="${item.goods.name}"></c:out>">--%>
                                     </a>
@@ -155,7 +155,7 @@
                         <c:forEach var="item" items="${Goods2}">
                             <li>
                                 <a href="<%=basePath%>detail/detail/${item.goods.id}" class="jizhuan" target="_blank">
-                                    <img class="jizhuan-image" src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort() %>/${item.images[0].imgUrl} />
+                                    <img class="jizhuan-image" src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort() %>/images/web/${item.images[0].imgUrl} />
 <%--                                    <img class="jizhuan-image" src="<%=basePath%>images/web/${item.images[0].imgUrl}" alt="<c:out value="${item.goods.name}"></c:out>">--%>
                                     <p class="jizhuan-title"><c:out value="${item.goods.name}"></c:out></p>
                                     <p>

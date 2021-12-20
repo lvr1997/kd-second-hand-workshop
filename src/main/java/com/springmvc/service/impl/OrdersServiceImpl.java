@@ -35,4 +35,13 @@ public class OrdersServiceImpl implements OrdersService {
         return ordersMapper.selectOrdersByGoodId(goodId);
     }
 
+    @Override
+    public Double getSpendByUserId(Integer userId) {
+        return ordersMapper.getSpendByUserId(userId);
+    }
+
+    @Override
+    public Double getIncomeByUserId(Integer userId) {
+        return ordersMapper.getIncomeByUserId(userId);
+    }
 }

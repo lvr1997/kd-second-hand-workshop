@@ -104,7 +104,7 @@
             method: 'post' //上传接口的http类型
             ,success: function(res){ //上传成功后的回调
                 console.log(res);
-                $('#LAY_demo_upload').attr('src','<%=basePath%>images/web/'+res.src);
+                $('#LAY_demo_upload').attr('src','http://localhost:8088/images/banner/'+res.src);
             }
         });
 

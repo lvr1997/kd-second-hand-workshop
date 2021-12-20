@@ -65,4 +65,29 @@
 
     </select>
 
+    <select id="getSpendByUserId" resultType="java.lang.Double" parameterType="java.lang.Integer">
+        SELECT
+            SUM(g.price) as spend
+        FROM
+            orders o LEFT JOIN goods g
+        ON
+            o.good_id = g.id
+        group by
+            o.user_id
+        having
+            o.user_id = #{userId}
+    </select>
+
+    <select id="getIncomeByUserId" resultType="java.lang.Double" parameterType="java.lang.Integer">
+        SELECT
+            SUM(g.price) as income
+        FROM orders o LEFT JOIN goods g
+
+        ON o.good_id = g.id
+
+        group by g.user_id
+
+        HAVING g.user_id = #{userId}
+    </select>
+
 </mapper>

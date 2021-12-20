@@ -47,7 +47,23 @@
 
 ![QQ图片20211218172006.png](https://s2.loli.net/2021/12/18/RveWbpOrSstMgUi.png)
 
-5. 启动项目访问网址：localhost:8088/goods/index
+5. 在你的`tomcat`中建立`images`文件夹
+
+![image.png](https://s2.loli.net/2021/12/20/qjlAst3E58JP9u6.png)
+
+6. 在idea中配置images图片资源目录
+
+![image.png](https://s2.loli.net/2021/12/20/qjlAst3E58JP9u6.png)
+
+7. 选择刚刚在tomcat中建立的文件夹，点击ok
+
+ ![images](https://s2.loli.net/2021/12/20/ZNocujMeFawLfqd.png)
+ 
+8. 
+
+![image.png](https://s2.loli.net/2021/12/20/qjlAst3E58JP9u6.png)
+
+9. 启动项目访问网址：localhost:8088/goods/index
 
 ## 项目说明
 
@@ -61,7 +77,7 @@
 
 管理页面登录：localhost:8088/admin/toLogin
 
-系统管理员用户登录  17611056916/aaa
+系统管理员用户登录  17611006666/aaa
 
 ### 项目中可能遇到的问题
 
@@ -98,6 +114,14 @@
 1. 修复在Tomcat8.0及8.5运行环境下项目启动报404的问题
 
 2. 修复在个人中心查看自己购买的商品时，还可以购买自己的商品的bug
+
+2021.12.20
+
+1. 修复上传图片会存到target目录的bug
+
+2. 修复用户累计收入收出功能漏洞
+
+3. 清空除用户表、地址表以外其他表添加的测试数据
 
 ## 功能模块
 

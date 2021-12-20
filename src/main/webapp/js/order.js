@@ -20,7 +20,7 @@ $(function() {
                     data.result.forEach(function(v) {
                         $('.comment-list').append('<li>' +
                             '<p>订单号: <b>' + v.orders.orderId + '</b> 支付订单: <b>' + v.orders.payId + '</b><span class="fr">购买于：' + v.orders.createAt + '</span></p>' +
-                            '<p>闲置名称： <a href="/detail/detail/' + v.good.id + '" target="_blank" title="' + v.good.name + '">' + v.good.name + '</a></p>'+
+                            '<p>闲置名称：' + v.good.name + '</a></p>'+
                             '<p>收货地址： ' + v.address.recvDistrict + '<span class="fr">订单状态：' + v.orders.status + '</span></p>' +
                             '</li>')
                     })
@@ -66,9 +66,8 @@ $(function() {
                             '<p><span><b>出售时间：'+v.orders.createAt+'</b></span><span class="fr"><b>订单号：'+v.orders.orderId+'</b></span></p>'+
                             '</div>'+
                             '<div class="list-main clearfix">'+
-                                '<a href="/detail/detail/'+v.good.id+'" class="goods-images fl"><img src="/images/web/'+v.images[0].imgUrl+'" ></a>'+
+                                '<img src="http://localhost:8088/images/web/'+v.images[0].imgUrl+'" >'+
                                 '<div class="good-info fl">'+
-                                '<a href="/detail/detail/'+v.good.id+'" class="goods-title">'+v.good.name+'</a>'+
                             '<p class="goods-price">￥<span>'+v.good.price+'</span></p>'+
                             '<p class="goods-price">收货地址：<span>'+v.address.recvDistrict+'</span></p>'+
                             '</div>'+

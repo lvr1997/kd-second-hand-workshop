@@ -54,7 +54,7 @@
         <div class="layui-form-item">
             <label  class="layui-form-label">图片
             </label>
-            <img id="LAY_demo_upload" width="200" src="<%=basePath%>images/web/${carouselResult.imgUrl}">
+            <img id="LAY_demo_upload" width="200" src="<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort() %>/images/banner/${carouselResult.imgUrl}">
         </div>
 
         <div class="layui-form-item">
@@ -105,7 +105,7 @@
             method: 'post' //上传接口的http类型
             ,success: function(res){ //上传成功后的回调
                 console.log(res);
-                $('#LAY_demo_upload').attr('src','<%=basePath%>images/web/'+res.src);
+                $('#LAY_demo_upload').attr('src','<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort() %>/images/banner/'+res.src);
             }
         });
 

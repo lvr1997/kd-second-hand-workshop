@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
@@ -338,7 +339,7 @@ public class AdminController {
      */
     @RequestMapping(value = "/save_carousel")
     public @ResponseBody Map<String,Object> saveCarousel(Integer id,String title,String imgUrl,String content,String link){
-        String url = imgUrl.substring("http://localhost:8088/images/web/".length());
+        String url = imgUrl.substring("http://localhost:8088/images/banner/".length());
         Carousel carousel = new Carousel();
         carousel.setId(id);
         carousel.setTitle(title);
@@ -355,16 +356,22 @@ public class AdminController {
 
     /**
      * 处理保存上传的轮播图图片
-     * @param session
+     * @param request
      * @param fileName
      * @return
      */
     @ResponseBody
     @RequestMapping(value = "/fileUpload", produces = "application/json")
-    public Map<String,Object> fileUpload(HttpSession session,@RequestParam("avatar") MultipartFile fileName){
+    public Map<String,Object> fileUpload(HttpServletRequest request, @RequestParam("avatar") MultipartFile fileName){
         String oldFileName = fileName.getOriginalFilename(); //获取上传文件的原名
         //存储图片的物理路径
-        String file_path = session.getServletContext().getRealPath("images");
+        File rootPath = new File(request.getServletContext().getRealPath("/")).getParentFile();
+        File uploadFile = new File(rootPath.getPath()+"/images/banner/");
+
+        if(!uploadFile.exists()){
+            uploadFile.mkdirs();
+        }
+
         Map<String,Object> map = new HashMap<String,Object>();
         //上传图片
         if(fileName != null && oldFileName != null && oldFileName.length()>0) {
@@ -372,18 +379,18 @@ public class AdminController {
                 //新的图片名称
                 String newFileName = UUID.randomUUID() + oldFileName.substring(oldFileName.lastIndexOf("."));
                 //新图片
-                File newFile = new File(file_path + "/web/" + newFileName);
+                String url = rootPath.getPath()+"/images/banner/" + newFileName;
                 //将内存中的数据写入磁盘
-                fileName.transferTo(newFile);
+                fileName.transferTo(new File(url));
                 //返回头像信息保存成功信息
                 map.put("success", true);
-                map.put("msg", "头像上传成功");
+                map.put("msg", "上传成功");
                 map.put("src", newFileName);
                 return map;
             } catch (Exception e) {
                 e.printStackTrace();
                 map.put("succcess",false);
-                map.put("msg","头像上传失败");
+                map.put("msg","上传失败");
             }
         }
         return map;
