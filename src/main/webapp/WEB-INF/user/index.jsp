@@ -87,7 +87,9 @@
                             <span>发布时间：<c:out value="${item.goods.startTime}"></c:out></span>
                         </div>
                         <div class="list-main clearfix">
-                            <a href="<%=basePath%>detail/detail/${item.goods.id}" class="goods-images fl"><img src="<%=basePath%>images/web/${item.images[0].imgUrl}" ></a>
+                            <a href="<%=basePath%>detail/detail/${item.goods.id}" class="goods-images fl">
+                                <img src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort() %>/${item.images[0].imgUrl} />
+                            </a>
                             <div class="good-info fl">
                                 <p href="#" class="goods-title"><c:out value="${item.goods.name}"></c:out></p>
                                 <p class="goods-price">￥<span><c:out value="${item.goods.price}"></c:out></span></p>

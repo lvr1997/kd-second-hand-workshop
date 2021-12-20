@@ -90,7 +90,10 @@
                     <div class="spec-items">
                         <ul>
                             <c:forEach var="item" items="${goodsExtend.images}">
-                                <li class=""><img src="<%=basePath%>images/web/${item.imgUrl}"></li>
+                                <li class="">
+                                    <img src=<%=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort() %>/${item.imgUrl} />
+<%--                                    <img src="<%=basePath%>images/web/${item.imgUrl}">--%>
+                                </li>
                             </c:forEach>
                         </ul>
                     </div>

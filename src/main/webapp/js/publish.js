@@ -13,7 +13,7 @@ $(function () {
 				layer.msg(data.msg)
 				if (data.success) {
 					$('.layui-upload-button').before('<div class="uploaded">' +
-						'<img class="good-image" src="'+'../../images/web/' + data.data.src + '">' +
+						'<img class="good-image" src="'+'http://localhost:8088/images/web/' + data.data.src + '">' +
 						'<i class="icon delete" data-src="' + data.data.src + '" onclick="deleteImage(this);">&#xe6a2;</i>' +
 						'</div>')
 					num++

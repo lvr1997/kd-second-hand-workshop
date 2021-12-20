@@ -3,6 +3,8 @@ package com.springmvc.controller;
 import com.springmvc.pojo.*;
 import com.springmvc.service.*;
 import com.springmvc.util.DateUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -19,6 +21,8 @@ import java.util.*;
 @Controller
 @RequestMapping("/publish")
 public class PublishController {
+
+    private Logger logger = LoggerFactory.getLogger(PublishController.class);
 
     @Resource
     private UserService userService;
@@ -69,21 +73,28 @@ public class PublishController {
      */
     @ResponseBody
     @RequestMapping(value = "/publish/upload",method = RequestMethod.POST)
-    public Map<String,Object> uploadFile(HttpSession session, @RequestParam("info") MultipartFile fileName) throws IllegalStateException, IOException{
+    public Map<String,Object> uploadFile(HttpSession session,HttpServletRequest request, @RequestParam("info") MultipartFile fileName) throws IllegalStateException, IOException{
         //获取上传文件的原名
         String oldFileName = fileName.getOriginalFilename();
 
         //存储图片的物理路径
-        String file_path = session.getServletContext().getRealPath("images");
+        //获取项目部署目录根 （此处为tomcat下的webapps目录路径如 D:\apache-tomcat-7.0.92\webapps，避免项目重新部署后上传的文件被清除丢失）
+        File rootPath = new File(request.getServletContext().getRealPath("/")).getParentFile();
+        File uploadFile = new File(rootPath.getPath()+"/images/web/");
+
+        if(!uploadFile.exists()){
+            uploadFile.mkdirs();
+        }
 
         //上传图片
         if(fileName!=null && oldFileName!=null && oldFileName.length()>0){
             //新的图片名称
             String newFileName = UUID.randomUUID() + oldFileName.substring(oldFileName.lastIndexOf("."));
             //新图片
-            File newFile = new File(file_path+"/web/"+newFileName);
+            String url = rootPath.getPath()+"/images/web/" + newFileName;
+//            logger.info("图片路径=====》"+url);
             //将内存中的数据写入磁盘
-            fileName.transferTo(newFile);
+            fileName.transferTo(new File(url));
             //将新图片名称返回到前端
             Map<String,Object> map=new HashMap<String,Object>();
             Map<String,Object> data=new HashMap<String,Object>();
@@ -101,15 +112,15 @@ public class PublishController {
 
     /**
      * 删除上传的缓存 闲置图片
-     * @param session session信息
+     * @param request request
      * @param fileName 图片名称
      * @return
      */
     @RequestMapping(value = "/publish/delete_image",method = RequestMethod.POST)
     public @ResponseBody
-    Map<String,Object> delectUploadFile(HttpSession session, @RequestParam("path") String fileName){
+    Map<String,Object> delectUploadFile(HttpServletRequest request, @RequestParam("path") String fileName){
         //获得物理路径
-        String true_path = session.getServletContext().getRealPath("images");
+        String true_path = request.getServletContext().getRealPath("/images");
         //设置文件的存储路径
         String file_name = true_path+"\\web\\"+fileName;
         File file1 = new File(file_name);
