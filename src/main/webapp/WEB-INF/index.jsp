@@ -38,7 +38,7 @@
                 <div class="nav-right fr">
                     <c:if test="${!empty cur_user}">
                         <a href="/user/index" class="log-btn">
-                            <img src="<%=basePath%>images/web/user/${cur_user.imgUrl}" class="user-header-image">${cur_user.username}</a>
+                            <img src="<%=basePath%>images/user/${cur_user.imgUrl}" class="user-header-image">${cur_user.username}</a>
                         <a href="/user/logout" class="log-btn">退出</a>
                     </c:if>
                     <c:if test="${empty cur_user}">

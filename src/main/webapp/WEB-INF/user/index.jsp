@@ -46,7 +46,7 @@
         </ul>
         <div class="nav-right fr">
             <c:if test="${!empty cur_user}">
-                <a href="/user/index" class="log-btn"><img src="<%=basePath%>images/web/user/${cur_user.imgUrl}" class="user-header-image">${cur_user.username}</a>
+                <a href="/user/index" class="log-btn"><img src="<%=basePath%>images/user/${cur_user.imgUrl}" class="user-header-image">${cur_user.username}</a>
                 <a href="/user/logout" class="log-btn">退出</a>
             </c:if>
         </div>
@@ -55,7 +55,7 @@
 <div id="main" class="clearfix">
     <div class="user-sider fl">
         <div class="user-info">
-            <img src="<%=basePath%>images/web/user/${cur_user.imgUrl}" class="user-header">
+            <img src="<%=basePath%>images/user/${cur_user.imgUrl}" class="user-header">
             <a href="/user/userinfo" class="username">${cur_user.username}</a>
             <%--<div class="auth">--%>
                 <%--<a class="realname-auth" href="/user/auth"><i class="icon" title="未实名认证"></i></a>--%>
