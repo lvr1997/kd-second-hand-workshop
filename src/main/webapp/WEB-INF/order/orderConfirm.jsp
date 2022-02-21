@@ -40,7 +40,7 @@
             <div class="nav-right fr">
                 <c:if test="${!empty cur_user}">
                     <a href="/user/index" class="log-btn">
-                        <img src="<%=basePath%>images/web/user/${cur_user.imgUrl}" class="user-header-image">${cur_user.username}</a>
+                        <img src="<%=basePath%>images/user/${cur_user.imgUrl}" class="user-header-image">${cur_user.username}</a>
                     <a href="/user/logout" class="log-btn">退出</a>
                 </c:if>
                 <c:if test="${empty cur_user}">
@@ -69,6 +69,9 @@
         <div class="adress_choice">
             <p>收货人信息</p>
         <c:forEach items="${listAddress}" var="address">
+            <c:if test="${listAddress == null}">
+                <h4>还没有添加收货地址，先去添加收货地址吧！</h4>
+            </c:if>
             <c:if test="${address.isDefault==1}">
                 <div id="addresId1" class="base_select" data-aid="${address.id}">
                     <i class="address_name">

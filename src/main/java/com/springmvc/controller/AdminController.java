@@ -315,7 +315,7 @@ public class AdminController {
     public @ResponseBody Map<String,Object> insertCarousel(String title,String imgUrl,String content,String link){
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
-        String url = imgUrl.substring("http://localhost:8088/images/web/".length());
+        String url = imgUrl.substring("http://localhost:8088/images/banner/".length());
 
         Carousel carousel = new Carousel(1,title,sdf.format(new Date()),(byte)1,content,link,url);
 

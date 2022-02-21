@@ -69,7 +69,7 @@
                 <td>${item.id}</td>
                 <td>${item.title}</td>
                 <td align="left">
-                    <img src="<%=basePath%>images/web/${item.imgUrl}" alt="${item.title}" width="56" height="56">
+                    <img src="<%=basePath%>images/banner/${item.imgUrl}" alt="${item.title}" width="56" height="56">
                 </td>
                 <td >${item.createAt}</td>
                 <td >${item.descript}</td>

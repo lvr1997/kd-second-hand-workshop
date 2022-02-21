@@ -81,7 +81,7 @@
         <div class="nav-right fr">
             <c:if test="${!empty cur_user}">
                 <a href="/user/index" class="log-btn">
-                    <img src="<%=basePath%>images/web/user/${cur_user.imgUrl}" class="user-header-image">${cur_user.username}</a>
+                    <img src="<%=basePath%>images/user/${cur_user.imgUrl}" class="user-header-image">${cur_user.username}</a>
                 <a href="/user/logout" class="log-btn">退出</a>
             </c:if>
             <c:if test="${empty cur_user}">
@@ -171,11 +171,12 @@
 
 <script>
     $("#count_bar .okPay").css("display","none");
-    $("#dnBank>ul>li img").click(function(){
-        $(this).addClass("hover") ;
-        $(this).parent().parent().siblings().children('label').children('img').removeClass('hover');
-        $("#count_bar .okPay").show("3000");
-    });
+    $("#count_bar .okPay").css("display","block");
+    // $("#dnBank").on('click', 'img', function(){
+    //     $(this).addClass("hover") ;
+    //     $(this).parent().parent().siblings().children('label').children('img').removeClass('hover');
+    //
+    // });
     /* $(":not(#count_bar .okPay)").css("display","none"); */
 </script>
 <script type="text/javascript">
@@ -185,7 +186,7 @@
         alert(11);
     }
     $(function(){
-        getProvince(-1,-1,-1);
+        // getProvince(-1,-1,-1);
 
     });
 
