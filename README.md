@@ -31,39 +31,6 @@
 
 数据库：MySQL 
 
-## 启动项目
-
-1. 使用IDEA打开项目
-
-2. 编辑Tomcat配置
-
-![QQ截图20211218171208.png](https://s2.loli.net/2021/12/18/UJR5dW6LDYjvIbt.png)
-
-3. 配置Tomcat路径、jre环境、端口号
-
-![QQ图片20211218171636.png](https://s2.loli.net/2021/12/18/H28jI7PM5yvNUAL.png)
-
-4. 将项目war包添加至tomcat中
-
-![QQ图片20211218172006.png](https://s2.loli.net/2021/12/18/RveWbpOrSstMgUi.png)
-
-5. 在你的`tomcat`中建立`images`文件夹
-
-![image.png](https://s2.loli.net/2021/12/20/qjlAst3E58JP9u6.png)
-
-6. 在idea中配置images图片资源目录
-
-![image.png](https://s2.loli.net/2021/12/20/qjlAst3E58JP9u6.png)
-
-7. 选择刚刚在tomcat中建立的文件夹，点击ok
-
- ![images](https://s2.loli.net/2021/12/20/ZNocujMeFawLfqd.png)
- 
-8. 
-
-![image.png](https://s2.loli.net/2021/12/20/qjlAst3E58JP9u6.png)
-
-9. 启动项目访问网址：localhost:8088/goods/index
 
 ## 项目说明
 
@@ -81,7 +48,7 @@
 
 ### 项目中可能遇到的问题
 
-**可以在这里提交issues：**[项目遇到的问题和建议看这里 · Issue #19 · lvr1997/kd-second-hand-workshop (github.com)](https://github.com/lvr1997/kd-second-hand-workshop/issues/19)
+**可以在这里提交issues：**[【科大二手工坊】项目中遇到的问题及解决方案](https://github.com/lvr1997/kd-second-hand-workshop/issues/19)
 
 **PS: 如果感兴趣的话可以添加qq群 696224249 一起讨论哦^v^**
 
@@ -117,7 +84,7 @@
 
 2021.12.20
 
-1. 修复上传图片会存到target目录的bug
+1. 修复上传图片会存到target目录以及重新部署后，上传的图片丢失的问题的bug
 
 2. 修复用户累计收入收出功能漏洞
 
