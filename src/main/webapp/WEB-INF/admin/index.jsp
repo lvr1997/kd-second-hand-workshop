@@ -35,7 +35,7 @@
             <%--</a>--%>
             <ul class="layui-nav" lay-filter="">
                 <li class="layui-nav-item">
-                    <img src="<%=basePath%>images/web/user/${admin.imgUrl}" class="layui-circle" style="border: 2px solid #A9B7B7;" width="35px" alt="">
+                    <img src="<%=basePath%>images/user/${admin.imgUrl}" class="layui-circle" style="border: 2px solid #A9B7B7;" width="35px" alt="">
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;">${admin.username}</a>

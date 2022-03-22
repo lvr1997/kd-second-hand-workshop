@@ -186,8 +186,10 @@
         </script>
         <script>
             function payment(gid,aid){
-                if(confirm("确认订单吗?")){
+                if(aid && confirm("确认订单吗?")){
                     location="/order/payment?gid="+gid+"&aid="+aid;
+                } else {
+                    alert("收货地址为空，先去添加收货地址吧！！！")
                 }
             }
         </script>

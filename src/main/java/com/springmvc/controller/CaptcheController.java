@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
 
 
 import javax.imageio.ImageIO;
@@ -20,6 +18,7 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -76,10 +75,11 @@ public class CaptcheController {
             g.drawLine(r.nextInt(125), r.nextInt(33), r.nextInt(125), r.nextInt(33));
         }
 
-        BASE64Encoder encoder = new BASE64Encoder();
+        Base64.Encoder encoder = Base64.getEncoder();
         ByteArrayOutputStream bs = new ByteArrayOutputStream();
         ImageIO.write(image, "png", bs);
-        String imgsrc = encoder.encode(bs.toByteArray());
+        String imgsrc = encoder.encodeToString(bs.toByteArray());
+//        String imgsrc = encoder.encode(bs.toByteArray());
         Map < String , Object > jsonMap = new HashMap< String , Object>();
         jsonMap.put("success",true);
         jsonMap.put("image","data:image/png;base64,"+imgsrc);
